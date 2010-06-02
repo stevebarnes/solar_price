@@ -1,0 +1,36 @@
+- title "Site Details"
+
+%p
+  %strong Quote Type:
+  =h @site_details.quote_type
+%p
+  %strong First Name:
+  =h @site_details.first_name
+%p
+  %strong Last Name:
+  =h @site_details.last_name
+%p
+  %strong Email:
+  =h @site_details.email
+%p
+  %strong Street Address:
+  =h @site_details.street_address
+%p
+  %strong Suburb:
+  =h @site_details.suburb
+%p
+  %strong State:
+  =h @site_details.state
+%p
+  %strong Postcode:
+  =h @site_details.postcode
+%p
+  %strong Country:
+  =h @site_details.country
+
+%p
+  = link_to "Edit", edit_site_details_path(@site_details)
+  |
+  = link_to "Destroy", @site_details, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", site_details_path

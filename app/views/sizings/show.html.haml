@@ -1,0 +1,27 @@
+- title "Sizing"
+
+%p
+  %strong Number Of People In Home:
+  =h @sizing.number_of_people_in_home
+%p
+  %strong Current Hw Type:
+  =h @sizing.current_hw_type
+%p
+  %strong Current Hw Size:
+  =h @sizing.current_hw_size
+%p
+  %strong Current Hw Location:
+  =h @sizing.current_hw_location
+%p
+  %strong Last Quarter Elec Bill:
+  =h @sizing.last_quarter_elec_bill
+%p
+  %strong Preferred Solar Power Size:
+  =h @sizing.preferred_solar_power_size
+
+%p
+  = link_to "Edit", edit_sizing_path(@sizing)
+  |
+  = link_to "Destroy", @sizing, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", sizings_path

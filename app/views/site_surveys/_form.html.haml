@@ -1,0 +1,32 @@
+- form_for @site_survey do |f|
+  = f.error_messages
+  %p
+    = f.label :roof_type
+    %br
+    = f.text_field :roof_type
+  %p
+    = f.label :meterage_ok_solar_power
+    %br
+    = f.text_field :meterage_ok_solar_power
+  %p
+    = f.label :meterage_ok_solar_hot_water
+    %br
+    = f.text_field :meterage_ok_solar_hot_water
+  %p
+    = f.label :approximate_roof_slope
+    %br
+    = f.text_field :approximate_roof_slope
+  %p
+    = f.label :percentage_shade_on_north_facing_roof
+    %br
+    = f.text_field :percentage_shade_on_north_facing_roof
+  %p
+    = f.label :house_stories
+    %br
+    = f.text_field :house_stories
+  %p
+    = f.label :unique_features
+    %br
+    = f.text_field :unique_features
+  %p
+    = f.submit

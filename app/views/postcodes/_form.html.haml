@@ -1,0 +1,6 @@
+- form_for @postcode do |f|
+  = f.error_messages
+  %p
+    = f.text_field :postcode, :size=>8
+  %p
+    %button{type => "Enter Postcode", :value => "OK", :id => "postcode_submit"}

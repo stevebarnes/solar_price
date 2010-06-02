@@ -1,0 +1,15 @@
+one:
+  number_of_people_in_home: 1
+  current_hw_type: MyString
+  current_hw_size: MyString
+  current_hw_location: MyString
+  last_quarter_elec_bill: 9.99
+  preferred_solar_power_size: MyString
+
+two:
+  number_of_people_in_home: 1
+  current_hw_type: MyString
+  current_hw_size: MyString
+  current_hw_location: MyString
+  last_quarter_elec_bill: 9.99
+  preferred_solar_power_size: MyString

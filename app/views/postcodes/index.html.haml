@@ -1,0 +1,11 @@
+%table
+  %tr
+    %th Postcode
+  - for postcode in @postcodes
+    %tr
+      %td= h postcode.postcode
+      %td= link_to 'Show', postcode
+      %td= link_to 'Edit', edit_postcode_path(postcode)
+      %td= link_to 'Destroy', postcode, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Postcode", new_postcode_path

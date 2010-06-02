@@ -1,0 +1,17 @@
+one:
+  roof_type: MyString
+  meterage_ok_solar_power: MyString
+  meterage_ok_solar_hot_water: MyString
+  approximate_roof_slope: MyString
+  percentage_shade_on_north_facing_roof: MyString
+  house_stories: 1
+  unique_features: MyString
+
+two:
+  roof_type: MyString
+  meterage_ok_solar_power: MyString
+  meterage_ok_solar_hot_water: MyString
+  approximate_roof_slope: MyString
+  percentage_shade_on_north_facing_roof: MyString
+  house_stories: 1
+  unique_features: MyString

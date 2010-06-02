@@ -1,0 +1,29 @@
+- title "Site Details"
+
+%table
+  %tr
+    %th Quote type
+    %th First name
+    %th Last name
+    %th Email
+    %th Street address
+    %th Suburb
+    %th State
+    %th Postcode
+    %th Country
+  - for site_details in @site_details
+    %tr
+      %td= h site_details.quote_type
+      %td= h site_details.first_name
+      %td= h site_details.last_name
+      %td= h site_details.email
+      %td= h site_details.street_address
+      %td= h site_details.suburb
+      %td= h site_details.state
+      %td= h site_details.postcode
+      %td= h site_details.country
+      %td= link_to 'Show', site_details
+      %td= link_to 'Edit', edit_site_details_path(site_details)
+      %td= link_to 'Destroy', site_details, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Site Details", new_site_details_path

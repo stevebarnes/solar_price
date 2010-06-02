@@ -1,0 +1,21 @@
+one:
+  quote_type: MyString
+  first_name: MyString
+  last_name: MyString
+  email: MyString
+  street_address: MyString
+  suburb: MyString
+  state: MyString
+  postcode: MyString
+  country: MyString
+
+two:
+  quote_type: MyString
+  first_name: MyString
+  last_name: MyString
+  email: MyString
+  street_address: MyString
+  suburb: MyString
+  state: MyString
+  postcode: MyString
+  country: MyString

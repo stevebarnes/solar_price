@@ -1,0 +1,25 @@
+- title "Site Surveys"
+
+%table
+  %tr
+    %th Roof type
+    %th Meterage ok solar power
+    %th Meterage ok solar hot water
+    %th Approximate roof slope
+    %th Percentage shade on north facing roof
+    %th House stories
+    %th Unique features
+  - for site_survey in @site_surveys
+    %tr
+      %td= h site_survey.roof_type
+      %td= h site_survey.meterage_ok_solar_power
+      %td= h site_survey.meterage_ok_solar_hot_water
+      %td= h site_survey.approximate_roof_slope
+      %td= h site_survey.percentage_shade_on_north_facing_roof
+      %td= h site_survey.house_stories
+      %td= h site_survey.unique_features
+      %td= link_to 'Show', site_survey
+      %td= link_to 'Edit', edit_site_survey_path(site_survey)
+      %td= link_to 'Destroy', site_survey, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Site Survey", new_site_survey_path

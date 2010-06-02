@@ -1,0 +1,9 @@
+log/*
+tmp/**/*
+nbproject
+db/*.sqlite3
+vendor/plugin/haml
+config/database.yml
+config/settings.yml
+tmp/restart.txt
+

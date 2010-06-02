@@ -1,0 +1,15 @@
+- title "Select Products"
+
+%table
+  %tr
+    %th Product
+    %th Timeframe
+  - for select_product in @select_products
+    %tr
+      %td= h select_product.product
+      %td= h select_product.timeframe
+      %td= link_to 'Show', select_product
+      %td= link_to 'Edit', edit_select_product_path(select_product)
+      %td= link_to 'Destroy', select_product, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Select Product", new_select_product_path

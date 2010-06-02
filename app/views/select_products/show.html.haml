@@ -1,0 +1,15 @@
+- title "Select Product"
+
+%p
+  %strong Product:
+  =h @select_product.product
+%p
+  %strong Timeframe:
+  =h @select_product.timeframe
+
+%p
+  = link_to "Edit", edit_select_product_path(@select_product)
+  |
+  = link_to "Destroy", @select_product, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", select_products_path

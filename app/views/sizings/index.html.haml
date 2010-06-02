@@ -1,0 +1,23 @@
+- title "Sizings"
+
+%table
+  %tr
+    %th Number of people in home
+    %th Current hw type
+    %th Current hw size
+    %th Current hw location
+    %th Last quarter elec bill
+    %th Preferred solar power size
+  - for sizing in @sizings
+    %tr
+      %td= h sizing.number_of_people_in_home
+      %td= h sizing.current_hw_type
+      %td= h sizing.current_hw_size
+      %td= h sizing.current_hw_location
+      %td= h sizing.last_quarter_elec_bill
+      %td= h sizing.preferred_solar_power_size
+      %td= link_to 'Show', sizing
+      %td= link_to 'Edit', edit_sizing_path(sizing)
+      %td= link_to 'Destroy', sizing, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Sizing", new_sizing_path

@@ -1,0 +1,28 @@
+- form_for @sizing do |f|
+  = f.error_messages
+  %p
+    = f.label :number_of_people_in_home
+    %br
+    = f.text_field :number_of_people_in_home
+  %p
+    = f.label :current_hw_type
+    %br
+    = f.text_field :current_hw_type
+  %p
+    = f.label :current_hw_size
+    %br
+    = f.text_field :current_hw_size
+  %p
+    = f.label :current_hw_location
+    %br
+    = f.text_field :current_hw_location
+  %p
+    = f.label :last_quarter_elec_bill
+    %br
+    = f.text_field :last_quarter_elec_bill
+  %p
+    = f.label :preferred_solar_power_size
+    %br
+    = f.text_field :preferred_solar_power_size
+  %p
+    = f.submit

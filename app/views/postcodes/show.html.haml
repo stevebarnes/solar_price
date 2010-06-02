@@ -1,0 +1,10 @@
+%p
+  %strong Postcode:
+  =h @postcode.postcode
+
+%p
+  = link_to "Edit", edit_postcode_path(@postcode)
+  |
+  = link_to "Destroy", @postcode, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", postcodes_path

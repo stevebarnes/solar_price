@@ -1,0 +1,30 @@
+- title "Site Survey"
+
+%p
+  %strong Roof Type:
+  =h @site_survey.roof_type
+%p
+  %strong Meterage Ok Solar Power:
+  =h @site_survey.meterage_ok_solar_power
+%p
+  %strong Meterage Ok Solar Hot Water:
+  =h @site_survey.meterage_ok_solar_hot_water
+%p
+  %strong Approximate Roof Slope:
+  =h @site_survey.approximate_roof_slope
+%p
+  %strong Percentage Shade On North Facing Roof:
+  =h @site_survey.percentage_shade_on_north_facing_roof
+%p
+  %strong House Stories:
+  =h @site_survey.house_stories
+%p
+  %strong Unique Features:
+  =h @site_survey.unique_features
+
+%p
+  = link_to "Edit", edit_site_survey_path(@site_survey)
+  |
+  = link_to "Destroy", @site_survey, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", site_surveys_path

@@ -1,0 +1,7 @@
+one:
+  product: MyString
+  timeframe: MyString
+
+two:
+  product: MyString
+  timeframe: MyString

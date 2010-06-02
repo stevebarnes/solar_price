@@ -1,0 +1,40 @@
+- form_for @site_details do |f|
+  = f.error_messages
+  %div#site_details_left
+
+  %div
+
+    %p
+      = f.radio_button :quote_type, "Onsite Personal Quote"
+      = f.label "Onsite Personal Quote"
+      %br
+      = f.radio_button :quote_type, "Email or Phone Quote at this stage please"
+      = f.label "Email or Phone Quote at this stage please"
+  %p
+    = f.label "Name"
+    = f.text_field :first_name, :size => "14"
+    = f.text_field :last_name, :size => "16"
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    = f.label :email
+    = f.text_field :email, :size => "27"
+  %p
+    %span#address
+      = f.label "INSTALLATION ADDRESS"
+  %p
+    = f.label :street_address
+    = f.text_field :street_address, :size => "27"
+    &nbsp;&nbsp;&nbsp;
+    = f.label :suburb
+    = f.text_field :suburb, :size => "27"
+  %p
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    = f.label :state
+    = f.text_field :state, :size => "8"
+    &nbsp;
+    = f.label :postcode
+    = f.text_field :postcode, :size => "6"
+    &nbsp;&nbsp;&nbsp;
+    = f.label :country
+    = f.text_field :country, :size => "15"
+  %div.nextdiv
+    %button{type => "next", :value => "OK", :id => "site_details_submit", :class => "next"}
