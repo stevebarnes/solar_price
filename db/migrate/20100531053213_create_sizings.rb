@@ -7,6 +7,7 @@ class CreateSizings < ActiveRecord::Migration
       t.string :current_hw_location
       t.decimal :last_quarter_elec_bill
       t.string :preferred_solar_power_size
+      t.references :postcode
       t.timestamps
     end
   end

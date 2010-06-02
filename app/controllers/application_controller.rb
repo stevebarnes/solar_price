@@ -7,4 +7,10 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
+
+  def get_postcode
+    @postcode = Postcode.find_by_id(params[:postcode_id])
+  end
+  
+
 end

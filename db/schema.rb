@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20100531053213) do
   create_table "select_products", :force => true do |t|
     t.string   "product"
     t.string   "timeframe"
+    t.integer  "postcode_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -34,6 +35,7 @@ ActiveRecord::Schema.define(:version => 20100531053213) do
     t.string   "state"
     t.string   "postcode"
     t.string   "country"
+    t.integer  "postcode_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -46,6 +48,7 @@ ActiveRecord::Schema.define(:version => 20100531053213) do
     t.string   "percentage_shade_on_north_facing_roof"
     t.integer  "house_stories"
     t.string   "unique_features"
+    t.integer  "postcode_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -57,6 +60,7 @@ ActiveRecord::Schema.define(:version => 20100531053213) do
     t.string   "current_hw_location"
     t.decimal  "last_quarter_elec_bill"
     t.string   "preferred_solar_power_size"
+    t.integer  "postcode_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

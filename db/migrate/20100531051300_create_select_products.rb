@@ -3,6 +3,7 @@ class CreateSelectProducts < ActiveRecord::Migration
     create_table :select_products do |t|
       t.string :product
       t.string :timeframe
+      t.references :postcode
       t.timestamps
     end
   end

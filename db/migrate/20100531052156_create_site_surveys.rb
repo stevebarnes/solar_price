@@ -8,6 +8,7 @@ class CreateSiteSurveys < ActiveRecord::Migration
       t.string :percentage_shade_on_north_facing_roof
       t.integer :house_stories
       t.string :unique_features
+      t.references :postcode
       t.timestamps
     end
   end

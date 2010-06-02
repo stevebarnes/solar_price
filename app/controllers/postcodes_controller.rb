@@ -14,7 +14,9 @@ class PostcodesController < ApplicationController
   def create
     @postcode = Postcode.new(params[:postcode])
     if @postcode.save
-      redirect_to :controller => "select_products", :action => "new"
+      redirect_to new_postcode_select_product_path(@postcode)
+#      redirect_to :controller => "select_products", :action => "new"
+#
 #      flash[:notice] = "Successfully created postcode."
 #      redirect_to @postcode
     else

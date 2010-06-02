@@ -10,6 +10,7 @@ class CreateSiteDetails < ActiveRecord::Migration
       t.string :state
       t.string :postcode
       t.string :country
+      t.references :postcode
       t.timestamps
     end
   end

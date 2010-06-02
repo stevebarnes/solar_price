@@ -1,13 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :sizings
-
-  map.resources :site_surveys
-
-  map.resources :site_details
-
-  map.resources :select_products
-
-  map.resources :postcodes
+  map.resources :postcodes do |postcode|
+    postcode.resources :sizings
+    postcode.resources :site_surveys
+    postcode.resources :site_details
+    postcode.resources :select_products
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
 
@@ -41,7 +38,7 @@ ActionController::Routing::Routes.draw do |map|
   #   end
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
-  map.root :controller => "postcodes", :action => "new"
+  map  .root :controller => "postcodes", :action => "new"
 
   #map.thankyou "/thankyou.html"
 
