@@ -2,6 +2,7 @@ body {
   background-color: #4B7399;
   font-family: Verdana, Helvetica, Arial;
   font-size: 13px;
+  color: green;
 }
 
 a img {
@@ -24,7 +25,7 @@ a {
   background-image: url(../../images/pageback.png);
   margin-left: auto;
   margin-right: auto;
-  padding-top: 215px;
+  padding-top: 165px;
   background-repeat: no-repeat;
 }
 
@@ -86,6 +87,8 @@ h1{
   font-weight: bold;
   text-decoration: underline;
   padding-left: 20px;
+  margin-top: 65px;
+  
 }
 
 p{
