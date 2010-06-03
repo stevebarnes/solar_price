@@ -1,18 +1,18 @@
 - form_for [@postcode, @select_product] do |f|
   = f.error_messages
   %div#product_choice
-    = f.radio_button :product, "Solar Electricity"
-    = f.label "Solar Electricity"
+    %h2
+      Are you interested in Solar Hot Water or Solar Power?
+    %span.option_label
+      = f.radio_button :product, "Solar Electricity"
+      = f.label "Solar Electricity"
     %br
-    = f.radio_button :product, "Solar Hot Water"
-    = f.label "Solar Hot Water"
+    %span.option_label
+      = f.radio_button :product, "Solar Hot Water"
+      = f.label "Solar Hot Water"
+    %h2
+      Do you want a quote this week ar are you just looking?
   %p
-    = f.label :product
-    %br
-    = f.text_field :product, :size=>16
-  %p
-    = f.label :timeframe
-    %br
-    = f.text_field :timeframe, :size=>16
+    = f.select :timeframe, [["immediately",0],["in the next month",1],["in the next six months",6],["in the next year",12],["Just looking, thanks", 99]]
   %div.nextdiv
     %button{type => "next", :value => "OK", :id => "select_product_submit", :class => "next"}

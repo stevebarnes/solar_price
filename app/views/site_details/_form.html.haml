@@ -1,7 +1,9 @@
 - form_for [@postcode, @site_details] do |f|
   = f.error_messages
-  %div
-    %p
+  %div#site_details
+    %h2
+      Do you want someone to quote on-site?
+    %span.option_label
       = f.radio_button :quote_type, "Onsite Personal Quote"
       = f.label "Onsite Personal Quote"
       %br
