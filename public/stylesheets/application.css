@@ -83,6 +83,12 @@ a {
   padding-left: 20px;
 }
 
+#select_product_timeframe{
+  /*color: green;*/
+  background-color: white;
+  font-size: 16px;
+}
+
 #select_product_submit{
   margin-top: 110px;
 }

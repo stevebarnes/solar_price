@@ -10,11 +10,11 @@ class SiteDetailsController < ApplicationController
 #  end
 #
   def new
-    @site_details = @postcode.build_site_detail
+    @site_details = @postcode.build_site_details
   end
   
   def create
-    @site_details = @postcode.build_site_detail(params[:site_details])
+    @site_details = @postcode.build_site_details(params[:site_details])
     if @site_details.save
        redirect_to new_postcode_site_survey_path(@postcode)
 #      redirect_to :controller => "site_surveys", :action => "new"

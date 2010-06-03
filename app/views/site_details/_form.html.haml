@@ -1,9 +1,6 @@
 - form_for [@postcode, @site_details] do |f|
   = f.error_messages
-  %div#site_details_left
-
   %div
-
     %p
       = f.radio_button :quote_type, "Onsite Personal Quote"
       = f.label "Onsite Personal Quote"
