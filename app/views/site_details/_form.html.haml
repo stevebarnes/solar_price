@@ -3,22 +3,33 @@
   %div#site_details
     %h2
       Do you want someone to quote on-site?
-    %span.option_label
-      = f.radio_button :quote_type, "Onsite Personal Quote"
-      = f.label "Onsite Personal Quote"
-      %br
-      = f.radio_button :quote_type, "Email or Phone Quote at this stage please"
-      = f.label "Email or Phone Quote at this stage please"
+    %p
+      Costs for installation of solar power can vary considerably depending on factors such as:
+      available roof space, orientation, shading, roof pitch, existing power boards, access to roof (height) and roof material.
+    %p
+      %span.option_label
+        = f.radio_button :quote_type, "Onsite Personal Quote"
+        = f.label "Onsite Personal Quote"
+        %br
+      %span.option_label
+        = f.radio_button :quote_type, "Email or Phone Quote at this stage please"
+        = f.label "Email or Phone Quote at this stage please"
   %p
-    = f.label "Name"
-    = f.text_field :first_name, :size => "14"
-    = f.text_field :last_name, :size => "16"
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    = f.label :email
-    = f.text_field :email, :size => "27"
+    %br
+    %h3
+      Your Details
+    %p
+      = f.label "Name"
+      = f.text_field :first_name, :size => "14"
+      = f.text_field :last_name, :size => "16"
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      = f.label :email
+      = f.text_field :email, :size => "27"
   %p
     %span#address
-      = f.label "INSTALLATION ADDRESS"
+    %br
+    %h3
+      Installation Address
   %p
     = f.label :street_address
     = f.text_field :street_address, :size => "27"

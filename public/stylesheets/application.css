@@ -123,7 +123,12 @@ h2{
   background-repeat: no-repeat;
   padding-left: 15px;
 }
-
+h3{
+  color: green;
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 20px;
+}
 
 p{
   font-size: 13px;
@@ -141,8 +146,9 @@ p{
 }
 
 .option_label{
-  font-size: 17px;
+  font-size: 16px;
   line-height: 30px;
+  padding-left: 20px;
 }
 /*************************************************************/
 /*** OTHER                                                 ***/
