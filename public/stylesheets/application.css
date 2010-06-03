@@ -103,7 +103,9 @@ a {
   padding-left: 20px;
 
 }
-
+#site_details_submit{
+  margin-top: 25px;
+}
 /*************************************************************/
 /*** POSTCODE PAGE                                         ***/
 /*************************************************************/
@@ -136,7 +138,8 @@ p{
   padding-left: 20px;
 }
 .nextdiv{
-  text-align: center;
+  padding-right: 30px;
+  text-align: right;
 }
 
 .next{
