@@ -3,11 +3,13 @@
   %div#product_choice
     %h2
       Are you interested in Solar Hot Water or Solar Power?
-    = f.radio_button :product, "Solar Electricity"
-    = f.label "Solar Electricity"
+    %span.option_label
+      = f.radio_button :product, "Solar Electricity"
+      = f.label "Solar Electricity"
     %br
-    = f.radio_button :product, "Solar Hot Water"
-    = f.label "Solar Hot Water"
+    %span.option_label
+      = f.radio_button :product, "Solar Hot Water"
+      = f.label "Solar Hot Water"
     %h2
       Do you want a quote this week ar are you just looking?
   %p
