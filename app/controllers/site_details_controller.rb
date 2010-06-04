@@ -1,4 +1,5 @@
 class SiteDetailsController < ApplicationController
+  
   before_filter :get_postcode
 
 #  def index
