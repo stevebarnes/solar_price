@@ -1,5 +1,42 @@
 - title "New Supplier"
 
-= render :partial => 'form'
-
-%p= link_to "Back to List", suppliers_path
+- form_for @supplier do |f|
+  = f.error_messages
+  %p
+    = f.label :name
+    %br
+    = f.text_field :name
+  %p
+    = f.label :first_name
+    %br
+    = f.text_field :first_name
+  %p
+    = f.label :last_name
+    %br
+    = f.text_field :last_name
+  %p
+    = f.label :abn
+    %br
+    = f.text_field :abn
+  %p
+    = f.label :phone
+    %br
+    = f.text_field :phone
+  %p
+    = f.label :email
+    %br
+    = f.text_field :email
+  %p
+    = f.label :suburb
+    %br
+    = f.text_field :suburb
+  %p
+    = f.label :state
+    %br
+    = f.text_field :state
+  %p
+    = f.label "Postcodes you would like to cover"
+    %br
+    = f.text_field :postcodes_requested
+  %p
+    = f.submit

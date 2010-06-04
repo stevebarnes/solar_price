@@ -82,6 +82,7 @@ ActiveRecord::Schema.define(:version => 20100604052033) do
     t.string   "state"
     t.string   "country"
     t.boolean  "active"
+    t.string   "postcodes_requested"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -11,6 +11,7 @@ class CreateSuppliers < ActiveRecord::Migration
       t.string :state
       t.string :country
       t.boolean :active
+      t.string :postcodes_requested
       t.timestamps
     end
   end
