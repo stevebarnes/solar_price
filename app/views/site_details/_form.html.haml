@@ -41,4 +41,4 @@
     = f.label :state
     = f.select :state, [["QLD","QLD"],["N.S.W","N.S.W."],["N.T.","N.T."],["S.A","S.A."],["TAS", "TAS"],["VIC", "VIC"],["W.A.", "W.A."]]
   %div.nextdiv
-    %button{type => "next", :value => "OK", :id => "site_details_submit", :class => "next"}
+    = image_submit_tag("/images/btn_next.png")
