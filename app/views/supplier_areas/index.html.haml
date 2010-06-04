@@ -1,0 +1,13 @@
+- title "Supplier Areas"
+
+%table
+  %tr
+    %th Postcode
+  - for supplier_area in @supplier_areas
+    %tr
+      %td= h supplier_area.postcode
+      %td= link_to 'Show', supplier_area
+      %td= link_to 'Edit', edit_supplier_area_path(supplier_area)
+      %td= link_to 'Destroy', supplier_area, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Supplier Area", new_supplier_area_path

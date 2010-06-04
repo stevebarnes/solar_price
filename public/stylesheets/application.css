@@ -33,7 +33,7 @@ a {
   background-image: url(../../images/firstpageback.png);
   margin-left: auto;
   margin-right: auto;
-  padding-top: 165px;
+  padding-top: 155px;
   background-repeat: no-repeat;
 }
 #subsequentpages{
@@ -53,6 +53,11 @@ a {
 /*************************************************************/
 /*** POSTCODE PAGE                                         ***/
 /*************************************************************/
+
+#menu_bar_fp{
+  padding-right: 10px;
+  text-align: right;
+}
 
 #new_postcode{
 

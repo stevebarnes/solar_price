@@ -1,5 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :suppliers
+ 
+  map.resources :suppliers do |supplier|
+    supplier.resources :supplier_areas
+  end
 
   map.resources :postcodes do |postcode|
     postcode.resources :sizings
@@ -17,6 +20,7 @@ ActionController::Routing::Routes.draw do |map|
   # Sample of named route:
   #   map.purchase 'products/:id/purchase', :controller => 'catalog', :action => 'purchase'
   # This route can be invoked with purchase_url(:id => product.id)
+
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   map.resources :products
@@ -41,6 +45,7 @@ ActionController::Routing::Routes.draw do |map|
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
   map  .root :controller => "postcodes", :action => "new"
+  # map .signup :controller => "suppliers", :action => "new"
 
   #map.thankyou "/thankyou.html"
 
