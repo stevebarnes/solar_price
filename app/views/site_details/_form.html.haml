@@ -33,18 +33,12 @@
   %p
     = f.label :street_address
     = f.text_field :street_address, :size => "27"
-    &nbsp;&nbsp;&nbsp;
+  %p
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     = f.label :suburb
     = f.text_field :suburb, :size => "27"
-  %p
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     = f.label :state
-    = f.text_field :state, :size => "8"
-    &nbsp;
-    = f.label :postcode
-    = f.text_field :postcode, :size => "6"
-    &nbsp;&nbsp;&nbsp;
-    = f.label :country
-    = f.text_field :country, :size => "15"
+    = f.select :state, [["QLD","QLD"],["N.S.W","N.S.W."],["N.T.","N.T."],["S.A","S.A."],["TAS", "TAS"],["VIC", "VIC"],["W.A.", "W.A."]]
   %div.nextdiv
     %button{type => "next", :value => "OK", :id => "site_details_submit", :class => "next"}
