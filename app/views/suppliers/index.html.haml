@@ -1,0 +1,31 @@
+- title "Suppliers"
+
+%table
+  %tr
+    %th Name
+    %th First name
+    %th Last name
+    %th Abn
+    %th Phone
+    %th Email
+    %th Suburb
+    %th State
+    %th Country
+    %th Active
+  - for supplier in @suppliers
+    %tr
+      %td= h supplier.name
+      %td= h supplier.first_name
+      %td= h supplier.last_name
+      %td= h supplier.abn
+      %td= h supplier.phone
+      %td= h supplier.email
+      %td= h supplier.suburb
+      %td= h supplier.state
+      %td= h supplier.country
+      %td= h supplier.active
+      %td= link_to 'Show', supplier
+      %td= link_to 'Edit', edit_supplier_path(supplier)
+      %td= link_to 'Destroy', supplier, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Supplier", new_supplier_path

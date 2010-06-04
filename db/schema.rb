@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100531053213) do
+ActiveRecord::Schema.define(:version => 20100604051427) do
 
   create_table "postcodes", :force => true do |t|
     t.string   "postcode"
@@ -61,6 +61,21 @@ ActiveRecord::Schema.define(:version => 20100531053213) do
     t.decimal  "last_quarter_elec_bill"
     t.string   "preferred_solar_power_size"
     t.integer  "postcode_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "suppliers", :force => true do |t|
+    t.string   "name"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "abn"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "suburb"
+    t.string   "state"
+    t.string   "country"
+    t.boolean  "active"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

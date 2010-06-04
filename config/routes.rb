@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :suppliers
+
   map.resources :postcodes do |postcode|
     postcode.resources :sizings
     postcode.resources :site_surveys

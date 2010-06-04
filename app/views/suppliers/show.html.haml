@@ -1,0 +1,39 @@
+- title "Supplier"
+
+%p
+  %strong Name:
+  =h @supplier.name
+%p
+  %strong First Name:
+  =h @supplier.first_name
+%p
+  %strong Last Name:
+  =h @supplier.last_name
+%p
+  %strong Abn:
+  =h @supplier.abn
+%p
+  %strong Phone:
+  =h @supplier.phone
+%p
+  %strong Email:
+  =h @supplier.email
+%p
+  %strong Suburb:
+  =h @supplier.suburb
+%p
+  %strong State:
+  =h @supplier.state
+%p
+  %strong Country:
+  =h @supplier.country
+%p
+  %strong Active:
+  =h @supplier.active
+
+%p
+  = link_to "Edit", edit_supplier_path(@supplier)
+  |
+  = link_to "Destroy", @supplier, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", suppliers_path
