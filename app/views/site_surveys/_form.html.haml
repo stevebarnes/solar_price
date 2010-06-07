@@ -46,7 +46,7 @@
     %p
       = f.label :percentage_shade_on_north_facing_roof
       %br
-      = f.text_field :percentage_shade_on_north_facing_roof
+      = f.select :percentage_shade_on_north_facing_roof, [["none","none"],["30%","30%"],["60%","60%"],["100%","100%"]]
     %p
       = f.label :house_stories
       %br
