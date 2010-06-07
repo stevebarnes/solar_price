@@ -1,28 +1,37 @@
 - form_for [@postcode, @sizing] do |f|
   = f.error_messages
-  %p
-    = f.label :number_of_people_in_home
-    %br
-    = f.text_field :number_of_people_in_home
-  %p
-    = f.label :current_hw_type
-    %br
-    = f.text_field :current_hw_type
-  %p
-    = f.label :current_hw_size
-    %br
-    = f.text_field :current_hw_size
-  %p
-    = f.label :current_hw_location
-    %br
-    = f.text_field :current_hw_location
-  %p
-    = f.label :last_quarter_elec_bill
-    %br
-    = f.text_field :last_quarter_elec_bill
-  %p
-    = f.label :preferred_solar_power_size
-    %br
-    = f.text_field :preferred_solar_power_size
+
+  %div.survey-l
+    %h3
+      SOLAR POWER
+    %p
+      = f.label :last_quarter_elec_bill
+      %br
+      = f.select :last_quarter_elec_bill, [["$0 to $100","<100"],["$100 to $400","<400"],["$400 to $600","<600"],["$600 plus","600+"]]
+    %p
+      = f.label :preferred_solar_power_size
+      %br
+      = f.text_field :preferred_solar_power_size
+
+  %div.survey-r
+    %h3
+      SOLAR HOT WATER
+    %p
+      = f.label :number_of_people_in_home
+      %br
+      = f.text_field :number_of_people_in_home
+    %p
+      = f.label :current_hw_type
+      %br
+      = f.text_field :current_hw_type
+    %p
+      = f.label :current_hw_size
+      %br
+      = f.text_field :current_hw_size
+    %p
+      = f.label :current_hw_location
+      %br
+      = f.text_field :current_hw_location
+
   %div.nextdiv
     = image_submit_tag("/images/btn_next.png")
