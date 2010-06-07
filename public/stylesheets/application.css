@@ -114,12 +114,12 @@ a {
 /*************************************************************/
 /*** SITE SURVEYS PAGE                                     ***/
 /*************************************************************/
-#roofarea-sp{
-  width: 35%;
+.survey-l{
+  width: 33%;
   float: left;
 }
-#roofarea-hw{
-  width: 65%;
+.survey-r{
+  width: 67%;
   float: left;
 }
 #survey-other{
