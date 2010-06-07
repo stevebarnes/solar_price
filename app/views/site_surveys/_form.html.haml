@@ -42,7 +42,7 @@
     %p
       = f.label :approximate_roof_slope
       %br
-      = f.text_field :approximate_roof_slope
+      = f.select :approximate_roof_slope, [["flat","flat"],["15-30 degrees","15-30 degrees"],["30+ degrees","30+ degrees"]]
     %p
       = f.label :percentage_shade_on_north_facing_roof
       %br
