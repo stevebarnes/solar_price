@@ -1,7 +1,5 @@
-class SiteDetailsController < ApplicationController
-  
+class SiteDetailsController < ApplicationController 
   before_filter :get_postcode
-
 #  def index
 #    @site_details = SiteDetails.all
 #  end

@@ -15,7 +15,7 @@ class SiteSurveysController < ApplicationController
   def create
     @site_survey = @postcode.build_site_survey(params[:site_survey])
     if @site_survey.save
-      redirect_to new_postcode_sizings_path(@postcode)
+      redirect_to new_postcode_sizing_path(@postcode)
 #      flash[:notice] = "Successfully created site survey."
 #      redirect_to @site_survey
     else
