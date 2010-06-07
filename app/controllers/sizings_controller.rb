@@ -1,4 +1,5 @@
 class SizingsController < ApplicationController
+    before_filter :get_postcode
   def index
     @sizings = Sizing.all
   end

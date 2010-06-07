@@ -1,17 +1,35 @@
 - form_for [@postcode, @site_survey] do |f|
   = f.error_messages
+  %h2
+    Site Details
   %p
     = f.label :roof_type
-    %br
-    = f.text_field :roof_type
+    = f.select :roof_type, [["Colorbond","Colorbond"],["tile","tile"],["asbestos","asbestos"],["other","other"]]
   %p
-    = f.label :meterage_ok_solar_power
-    %br
-    = f.text_field :meterage_ok_solar_power
-  %p
-    = f.label :meterage_ok_solar_hot_water
-    %br
-    = f.text_field :meterage_ok_solar_hot_water
+    Your North Facing Roof is important. Please answer the following:
+  %div#roofarea-sp
+    %h3
+      SOLAR POWER
+    %p
+      %span.option_label
+        = f.radio_button :meterage_ok_solar_power, "Solar Electricity"
+        = f.label "Solar Electricity"
+      %br
+      %span.option_label
+        = f.radio_button :meterage_ok_solar_power, "Solar Hot Water"
+        = f.label "Solar Hot Water"
+  %div#roofarea-hw
+    %h3
+      SOLAR HOT WATER
+    %p
+      %span.option_label
+        = f.radio_button :meterage_ok_solar_hot_water, "Solar Electricity"
+        = f.label "Solar Electricity"
+      %br
+      %span.option_label
+        = f.radio_button :meterage_ok_solar_hot_water, "Solar Hot Water"
+        = f.label "Solar Hot Water"
+
   %p
     = f.label :approximate_roof_slope
     %br

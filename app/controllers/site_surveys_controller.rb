@@ -1,4 +1,5 @@
 class SiteSurveysController < ApplicationController
+    before_filter :get_postcode
 #  def index
 #    @site_surveys = SiteSurvey.all
 #  end
