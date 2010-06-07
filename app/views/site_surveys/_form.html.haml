@@ -50,7 +50,7 @@
     %p
       = f.label :house_stories
       %br
-      = f.text_field :house_stories
+      = f.select :house_stories, [["single","1"],["2","2"],["3","3"],["4+","4+"]]
     %p
       = f.label :unique_features
       %br
