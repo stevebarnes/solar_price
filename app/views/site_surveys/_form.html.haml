@@ -6,45 +6,54 @@
     = f.label :roof_type
     = f.select :roof_type, [["Colorbond","Colorbond"],["tile","tile"],["asbestos","asbestos"],["other","other"]]
   %p
-    Your North Facing Roof is important. Please answer the following:
+    Your North Facing Roof is important. Please answer the following (as applicable):
   %div#roofarea-sp
     %h3
       SOLAR POWER
     %p
       %span.option_label
-        = f.radio_button :meterage_ok_solar_power, "Solar Electricity"
-        = f.label "Solar Electricity"
+        = f.radio_button :meterage_ok_solar_power, "Solar Power not applicable"
+        = f.label "not applicable"
       %br
       %span.option_label
-        = f.radio_button :meterage_ok_solar_power, "Solar Hot Water"
-        = f.label "Solar Hot Water"
+        = f.radio_button :meterage_ok_solar_power, "Solar Power under 10sqm"
+        = f.label "under 10sqm"
+      %br
+      %span.option_label
+        = f.radio_button :meterage_ok_solar_power, "Solar Power over 10sqm"
+        = f.label "over 10sqm"
   %div#roofarea-hw
     %h3
       SOLAR HOT WATER
     %p
       %span.option_label
-        = f.radio_button :meterage_ok_solar_hot_water, "Solar Electricity"
-        = f.label "Solar Electricity"
+        = f.radio_button :meterage_ok_solar_power, "Solar Hot Water not applicable"
+        = f.label "not applicable"
       %br
       %span.option_label
-        = f.radio_button :meterage_ok_solar_hot_water, "Solar Hot Water"
-        = f.label "Solar Hot Water"
+        = f.radio_button :meterage_ok_solar_hot_water, "Solar Hot Water under 3sqm"
+        = f.label "under 3sqm"
+      %br
+      %span.option_label
+        = f.radio_button :meterage_ok_solar_hot_water, "Solar Hot Water over 3sqm"
+        = f.label "over 3sqm"
 
-  %p
-    = f.label :approximate_roof_slope
-    %br
-    = f.text_field :approximate_roof_slope
-  %p
-    = f.label :percentage_shade_on_north_facing_roof
-    %br
-    = f.text_field :percentage_shade_on_north_facing_roof
-  %p
-    = f.label :house_stories
-    %br
-    = f.text_field :house_stories
-  %p
-    = f.label :unique_features
-    %br
-    = f.text_field :unique_features
+  %div#survey-other
+    %p
+      = f.label :approximate_roof_slope
+      %br
+      = f.text_field :approximate_roof_slope
+    %p
+      = f.label :percentage_shade_on_north_facing_roof
+      %br
+      = f.text_field :percentage_shade_on_north_facing_roof
+    %p
+      = f.label :house_stories
+      %br
+      = f.text_field :house_stories
+    %p
+      = f.label :unique_features
+      %br
+      = f.text_field :unique_features
   %div.nextdiv
     = image_submit_tag("/images/btn_next.png")
