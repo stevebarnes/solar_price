@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(:version => 20100608011202) do
     t.boolean  "confirmation"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "postcode_id"
   end
 
   create_table "postcodes", :force => true do |t|

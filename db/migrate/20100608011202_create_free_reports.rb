@@ -3,6 +3,7 @@ class CreateFreeReports < ActiveRecord::Migration
     create_table :free_reports do |t|
       t.boolean :confirmation
       t.timestamps
+      t.references :postcode
     end
   end
   

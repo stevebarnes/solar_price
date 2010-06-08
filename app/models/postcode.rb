@@ -4,4 +4,5 @@ class Postcode < ActiveRecord::Base
   has_one :site_details
   has_one :site_survey
   has_one :sizing
+  has_one :free_report
 end
