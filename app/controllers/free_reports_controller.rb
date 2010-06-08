@@ -15,9 +15,9 @@ class FreeReportsController < ApplicationController
   def create
     @free_report = @postcode.build_free_report(params[:free_repoort])
     if @free_report.save
-      flash[:notice] = "Successfully created free report."
-      redirect_to @free_report
-#      redirect_to new_postcode_free_report_path(@postcode)
+       flash[:notice] = "Thank you for choosing mysolarprice.com.au"
+#      redirect_to @free_report
+      redirect_to root_path
     else
       render :action => 'new'
     end
