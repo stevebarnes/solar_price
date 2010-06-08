@@ -8,7 +8,7 @@ class Mailer < ActionMailer::Base
     from       'test1@busigeeks.com.au'
     sent_on    sent_at
     
-    body       :postcode => postcode
+#    body       :postcode => postcode
   end
 
   def thankyou(sent_at = Time.now)
@@ -17,7 +17,17 @@ class Mailer < ActionMailer::Base
     from       ''
     sent_on    sent_at
     
-    body       :greeting => 'Hi,'
+#    body       :greeting => 'Hi,'
   end
+
+    def free_report(sent_at = Time.now)
+    subject    'Here is your free report from mysolarprice.com.au'
+    recipients @postcode.site_details.email
+    from       'test1@busigeeks.com.au'
+    sent_on    sent_at
+
+#    body       :greeting => 'Hi,'
+  end
+
 
 end
