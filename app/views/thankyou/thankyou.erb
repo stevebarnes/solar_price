@@ -1,0 +1,23 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+
+%h2
+  Thank you <%= @postcode.site_details.first_name %>.
+%p
+  You will now be contacted with quotes from our trusted Solar technology companies shortly.
+%h2
+  Not sure what questions to ask the sales consultant?
+%p
+  Why not take advantage of our free checklist of questions to aska solar salesperson, which includes a a list of common
+%p
+  Would you like to receive your free report?
+  %span.option_label
+  = f.radio_button :freereport, "Yes"
+  = f.label "Yes"
+  %br
+  %span.option_label
+    = f.radio_button :freereport, "No"
+    = f.label "No"
+  %br

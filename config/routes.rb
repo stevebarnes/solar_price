@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :free_reports
+
  
   map.resources :suppliers do |supplier|
     supplier.resources :supplier_areas

@@ -1,0 +1,12 @@
+- title "Free Report"
+
+%p
+  %strong Confirmation:
+  =h @free_report.confirmation
+
+%p
+  = link_to "Edit", edit_free_report_path(@free_report)
+  |
+  = link_to "Destroy", @free_report, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", free_reports_path

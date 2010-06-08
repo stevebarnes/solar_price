@@ -1,0 +1,13 @@
+- title "Free Reports"
+
+%table
+  %tr
+    %th Confirmation
+  - for free_report in @free_reports
+    %tr
+      %td= h free_report.confirmation
+      %td= link_to 'Show', free_report
+      %td= link_to 'Edit', edit_free_report_path(free_report)
+      %td= link_to 'Destroy', free_report, :confirm => 'Are you sure?', :method => :delete
+
+%p= link_to "New Free Report", new_free_report_path
