@@ -21,17 +21,17 @@
       %br
       = f.select :number_of_people_in_home, [["0-1","1"],["2","2"],["3","3"],["4","4"],["5","5"],["6","6"],["7+","7+"]]
     %p
-      = f.label :current_hw_type
-      %br
-      = f.select :current_hw_type, [["Natural Gas","Natural Gas"],["Instantaneous Gas","Instantaneous Gas"],["Bottled Gas","Bottled Gas"],["Heat Pump","Heat Pump"],["Electric","Electric"],["Solar","Solar"]]
-    %p
-      = f.label :current_hw_size
-      %br
-      = f.select :current_hw_size, [["0-80L"],["80-160L"],["over 160L"]]
-    %p
-      = f.label :current_hw_location
-      %br
-      = f.text_field :current_hw_location
-
+      %b
+        About your current Hot Water system:
+    %div#current-hw
+      %p
+        = f.label "Hot Water system Type"
+        = f.select :current_hw_type, [["Natural Gas","Natural Gas"],["Instantaneous Gas","Instantaneous Gas"],["Bottled Gas","Bottled Gas"],["Heat Pump","Heat Pump"],["Electric","Electric"],["Solar","Solar"]]
+      %p
+        = f.label "Hot Water system size"
+        = f.select :current_hw_size, [["0-80L"],["80-160L"],["over 160L"]]
+      %p
+        = f.label "Hot Water system location"
+        = f.select :current_hw_location, [["Inside"],["Outside"],["In Roof"],["On Roof"]]
   %div.nextdiv
     = image_submit_tag("/images/btn_next.png")
