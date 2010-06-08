@@ -102,7 +102,7 @@ a {
 /*************************************************************/
 
 #new_site_details{
-    width: 775px;
+  width: 775px;
   height: 333px;
   text-align: left;
   padding-left: 20px;
@@ -135,9 +135,32 @@ width:775px;
   position: relative;
 }
 
+/*************************************************************/
+/*** FREE REPORT PAGE                                      ***/
+/*************************************************************/
+#new_free_report {
+height:333px;
+padding-left:20px;
+text-align:left;
+width:775px;
+}
+
+.survey-l{
+  width: 33%;
+  float: left;
+}
+.survey-r{
+  width: 67%;
+  float: left;
+}
+#survey-other{
+  top: 15px;
+  width: 750px;
+  position: relative;
+}
 
 /*************************************************************/
-/*** POSTCODE PAGE                                         ***/
+/*** OTHER STUFF                                           ***/
 /*************************************************************/
 
 h1{
