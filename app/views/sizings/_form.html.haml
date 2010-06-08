@@ -23,11 +23,11 @@
     %p
       = f.label :current_hw_type
       %br
-      = f.text_field :current_hw_type
+      = f.select :current_hw_type, [["Natural Gas","Natural Gas"],["Instantaneous Gas","Instantaneous Gas"],["Bottled Gas","Bottled Gas"],["Heat Pump","Heat Pump"],["Electric","Electric"],["Solar","Solar"]]
     %p
       = f.label :current_hw_size
       %br
-      = f.text_field :current_hw_size
+      = f.select :current_hw_size, [["0-80L"],["80-160L"],["over 160L"]]
     %p
       = f.label :current_hw_location
       %br
