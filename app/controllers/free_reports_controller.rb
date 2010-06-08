@@ -1,4 +1,5 @@
 class FreeReportsController < ApplicationController
+  before_filter :get_postcode
   def index
     @free_reports = FreeReport.all
   end
@@ -12,10 +13,11 @@ class FreeReportsController < ApplicationController
   end
   
   def create
-    @free_report = FreeReport.new(params[:free_report])
+    @free_report = @postcode.build_free_report(params[:select_product])
     if @free_report.save
-      flash[:notice] = "Successfully created free report."
-      redirect_to @free_report
+#      flash[:notice] = "Successfully created free report."
+#      redirect_to @free_report
+      redirect_to new_postcode_free_report_path(@postcode)
     else
       render :action => 'new'
     end

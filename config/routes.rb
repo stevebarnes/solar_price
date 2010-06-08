@@ -11,6 +11,7 @@ ActionController::Routing::Routes.draw do |map|
     postcode.resources :site_surveys
     postcode.resources :site_details
     postcode.resources :select_products
+    postcode.resources :free_reports
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
