@@ -3,6 +3,7 @@ class CreateSupplierAreas < ActiveRecord::Migration
     create_table :supplier_areas do |t|
       t.string :postcode
       t.timestamps
+      t.references :supplier
     end
   end
   
