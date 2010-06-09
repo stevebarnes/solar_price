@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(:version => 20100608011202) do
     t.string   "postcode"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "supplier_id"
   end
 
   create_table "suppliers", :force => true do |t|
@@ -90,6 +91,8 @@ ActiveRecord::Schema.define(:version => 20100608011202) do
     t.string   "country"
     t.boolean  "active"
     t.string   "postcodes_requested"
+    t.integer  "hits_for_month"
+    t.integer  "hits_cumulative"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

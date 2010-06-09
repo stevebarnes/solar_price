@@ -12,6 +12,8 @@ class CreateSuppliers < ActiveRecord::Migration
       t.string :country
       t.boolean :active
       t.string :postcodes_requested
+      t.integer :hits_for_month
+      t.integer :hits_cumulative
       t.timestamps
     end
   end
