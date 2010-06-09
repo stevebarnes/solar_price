@@ -9,11 +9,11 @@ class SizingsController < ApplicationController
   end
   
   def new
-    @sizing = Sizing.new
+    @sizing = @postcode.build_sizing
   end
   
   def create
-    @sizing = Sizing.new(params[:sizing])
+    @sizing = @postcode.build_sizing(params[:sizing])
     if @sizing.save
       #Mailer.deliver_supplier_lead @postcode
 #      flash[:notice] = "Successfully created sizing."
