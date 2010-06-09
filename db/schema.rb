@@ -74,6 +74,8 @@ ActiveRecord::Schema.define(:version => 20100608011202) do
 
   create_table "supplier_areas", :force => true do |t|
     t.string   "postcode"
+    t.integer  "hits_for_month"
+    t.integer  "hits_cumulative"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "supplier_id"
