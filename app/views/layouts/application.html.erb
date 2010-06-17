@@ -18,5 +18,10 @@
 
       <%= yield %>
     </div>
+    <% if logged_in?  %>
+      <%= link_to "Suppliers", suppliers_path %>
+      <%= link_to "Logout", logout_path %>
+
+    <% end %>
   </body>
 </html>

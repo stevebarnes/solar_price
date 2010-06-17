@@ -6,19 +6,16 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :users
 
-  map.resources :free_reports
-
- 
   map.resources :suppliers do |supplier|
     supplier.resources :supplier_areas
   end
 
   map.resources :postcodes do |postcode|
-    postcode.resources :sizings
-    postcode.resources :site_surveys
-    postcode.resources :site_details
-    postcode.resources :select_products
-    postcode.resources :free_reports
+    postcode.resources :sizings, :only => [:new, :create]
+    postcode.resources :site_surveys, :only => [:new, :create]
+    postcode.resources :site_details, :only => [:new, :create]
+    postcode.resources :select_products, :only => [:new, :create]
+    postcode.resources :free_reports, :only => [:new, :create]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
