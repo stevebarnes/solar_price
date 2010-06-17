@@ -11,7 +11,7 @@ class Mailer < ActionMailer::Base
   end
 
   def thankyou(postcode, sent_at = Time.now)
-    subject    'Thankyou for applying to be a supplier/installer for mysolarprice.com.au'
+    subject    'Thankyou for using mysolarprice.com.au'
     recipients postcode.site_details.email
     from       'test1@busigeeks.com.au'
     sent_on    sent_at

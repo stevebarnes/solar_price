@@ -5,6 +5,11 @@
 <title>Another lead from mysolarprice.com.au</title>
 </head>
 <body>
-  <p>First Name: goes here</p>     <!-- notice it's a NESTED reference. We passed in @postcode and we get the rest -->
+  <%#*<p>Dear <%= @x.postcode.site_details.first_name%>,</p>%>
+  <%#*<p>Test Postcode instance: <%= postcode.postcode %></p>%>
+  <%#*<p>You have postcode <%=@x.postcode%> </p>%>
+  <%#*<p>First Name: <%= @postcode.SiteDetails.first_name%></p>     <!-- notice it's a NESTED reference. We passed in @postcode and we get the rest -->%>
+  <%#*<p>Postcode: <%= @postcode.postcode%></p>%>
+  <%#*<p>Products: <%= @postcode.select_products.products%></p>%>
 </body>
 </html>

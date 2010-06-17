@@ -24,10 +24,14 @@ class Postcode < ActiveRecord::Base
     @x = self
 
 #    p "here"
-    matched.each do |supplier|
+    matched.each do |supplier|    # ARE WE PASSING IN A "matched" ROW/OBJECT AND CALLING IT "supplier" here?
 #      p supplier.hits_for_month
       supplier.update_attributes(:hits_for_month => supplier.hits_for_month + 1, :hits_cumulative => supplier.hits_cumulative + 1)
-      Mailer.deliver_supplier_lead(supplier)  # do this email whilst I have the supoplier record and Postcode context
+      # SO THE LINE ABOVE, I USE "supplier." DOES THAT MEAN SUPPLIER PASSED IN OR SUPPLIER MODEL? SHOULD WE CHANGE PASSED IN NAME?
+      #
+      # do email to supplier whilst I have the supplier record and Postcode context
+      @supplier = supplier
+      Mailer.deliver_supplier_lead(@supplier)
 #      Mailer.deliver_supplier_lead(supplier, @x)
     end
   end
