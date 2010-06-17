@@ -1,5 +1,54 @@
-one:
-  postcode: MyString
-
-two:
-  postcode: MyString
+Aone:
+  supplier: one
+  postcode: "4001"
+Atwo:
+  supplier: one
+  postcode: "4002"
+Athree:
+  supplier: one
+  postcode: "4003"
+Afour:
+  supplier: one
+  postcode: "4004"
+Afive:
+  supplier: one
+  postcode: "4005"
+Asix:
+  supplier: one
+  postcode: "4006"
+Bone:
+  supplier: two
+  postcode: "4001"
+Btwo:
+  supplier: two
+  postcode: "4002"
+Bthree:
+  supplier: two
+  postcode: "4003"
+Bfour:
+  supplier: two
+  postcode: "4007"
+Bfive:
+  supplier: two
+  postcode: "4008"
+Bsix:
+  supplier: two
+  postcode: "4009"
+Cone:
+  supplier: three
+  postcode: "4001"
+Ctwo:
+  supplier: three
+  postcode: "4002"
+Cthree:
+  supplier: three
+  postcode: "4003"
+Cfour:
+  supplier: three
+  postcode: "4004"
+Cfive:
+  supplier: three
+  postcode: "4007"
+Csix:
+  supplier: three
+  postcode: "4009"

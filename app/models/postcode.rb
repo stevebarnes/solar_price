@@ -15,6 +15,8 @@ class Postcode < ActiveRecord::Base
 
     self.suppliers = matched   # get this POSTCODE entry to relate to SUPPLIERS through the info in MATCHED
 
-
+    matched.each do |supplier|
+      supplier.update_attributes(:hits_for_month => supplier.hits_for_month + 1, :hits_cumulative => supplier.hits_cumulative + 1)
+    end
   end
 end

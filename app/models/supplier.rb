@@ -4,7 +4,7 @@ class Supplier < ActiveRecord::Base
   has_many :supplier_leads
   has_many :postcodes, :through =>:supplier_leads
 
-  after_save :store_postcodes
+  after_create :store_postcodes
 
   def store_postcodes
     @requested.split(",").each do |x|
