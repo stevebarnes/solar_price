@@ -17,7 +17,7 @@ class SizingsController < ApplicationController
     if @sizing.save
       @postcode.distribute_leads
       @postcode.suppliers.each do |supplier|
-#        Mailer.deliver_supplier_lead(supplier, @postcode)
+      Mailer.deliver_supplier_lead(supplier, @postcode)
       end
       Mailer.deliver_thankyou(@postcode)
       redirect_to new_postcode_free_report_path(@postcode)

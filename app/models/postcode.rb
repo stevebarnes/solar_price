@@ -9,11 +9,19 @@ class Postcode < ActiveRecord::Base
   has_many :supplier_leads
   has_many :suppliers, :through =>:supplier_leads
 
+  validate :check_postcode
+
+  def check_postcode
+    errors.add_to_base("Please supply a postcode") if self.postcode.empty?
+  end
+
   def distribute_leads
     matched = Supplier.find(:all, :include=>:supplier_areas, :conditions=>{:supplier_areas=>{:postcode=>postcode}}, :order=>"suppliers.hits_for_month", :limit=>3)
-    puts "Not enough" if matched.length <3
+
+    puts "Not enough" if matched.length <3    # temporary code. Identifies not enough matches.
 
     self.suppliers = matched   # get this POSTCODE entry to relate to SUPPLIERS through the info in MATCHED
+
     p "here"
     matched.each do |supplier|
       p supplier.hits_for_month
