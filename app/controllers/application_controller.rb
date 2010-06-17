@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
 
   def get_postcode
     @postcode = Postcode.find_by_id(params[:postcode_id])
+    redirect_to new_postcode_path unless @postcode # if url string is hacked, go back to start page
   end
   
 
