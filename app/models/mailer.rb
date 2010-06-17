@@ -11,13 +11,13 @@ class Mailer < ActionMailer::Base
 #    body       :postcode => postcode
   end
 
-  def thankyou(sent_at = Time.now)
-    subject    'Mailer#thankyou'
-    recipients ''
-    from       ''
+  def thankyou(postcode, sent_at = Time.now)
+    subject    'thankyou'
+    recipients postcode.site_details.email
+    from       'test1@busigeeks.com.au'
     sent_on    sent_at
     
-#    body       :greeting => 'Hi,'
+    body       :x => postcode
   end
 
     def free_report(sent_at = Time.now)
