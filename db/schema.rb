@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100608011202) do
+ActiveRecord::Schema.define(:version => 20100617015516) do
 
   create_table "free_reports", :force => true do |t|
     t.boolean  "confirmation"
@@ -72,6 +72,58 @@ ActiveRecord::Schema.define(:version => 20100608011202) do
     t.datetime "updated_at"
   end
 
+  create_table "solar_installer_areas", :force => true do |t|
+    t.integer  "solar_supplier_id"
+    t.string   "postcode"
+    t.integer  "hits"
+    t.integer  "hits_for_month"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "solar_installers", :force => true do |t|
+    t.string   "name"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "abn"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "suburb"
+    t.string   "state"
+    t.boolean  "active"
+    t.string   "requested_postcodes"
+    t.integer  "hits_for_month"
+    t.integer  "hits_cummulative"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "solar_suppliers", :force => true do |t|
+    t.string   "name"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "abn"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "suburb"
+    t.string   "state"
+    t.boolean  "active"
+    t.string   "postcode1"
+    t.string   "postcode2"
+    t.string   "postcode3"
+    t.string   "postcode4"
+    t.string   "postcode5"
+    t.string   "postcode6"
+    t.string   "postcode7"
+    t.string   "postcode8"
+    t.string   "postcode9"
+    t.string   "postcode10"
+    t.integer  "hits_for_month"
+    t.integer  "hits_cummulative"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "supplier_areas", :force => true do |t|
     t.string   "postcode"
     t.integer  "hits_for_month"
@@ -79,6 +131,13 @@ ActiveRecord::Schema.define(:version => 20100608011202) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "supplier_id"
+  end
+
+  create_table "supplier_leads", :force => true do |t|
+    t.integer  "postcode_id"
+    t.integer  "supplier_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "suppliers", :force => true do |t|

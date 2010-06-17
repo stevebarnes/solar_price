@@ -6,7 +6,7 @@ class Sizing < ActiveRecord::Base
 
   def distribute_leads
       # 1. match suppliers
-      #
+      postcode.distribute_leads   # go to the PARENT model of all steps and run function from there
       # 2. Increment couters (all 4)
       #
   end
