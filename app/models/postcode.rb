@@ -21,11 +21,14 @@ class Postcode < ActiveRecord::Base
     puts "Not enough" if matched.length <3    # temporary code. Identifies not enough matches.
 
     self.suppliers = matched   # get this POSTCODE entry to relate to SUPPLIERS through the info in MATCHED
+    @x = self
 
-    p "here"
+#    p "here"
     matched.each do |supplier|
-      p supplier.hits_for_month
+#      p supplier.hits_for_month
       supplier.update_attributes(:hits_for_month => supplier.hits_for_month + 1, :hits_cumulative => supplier.hits_cumulative + 1)
+      Mailer.deliver_supplier_lead(supplier)  # do this email whilst I have the supoplier record and Postcode context
+#      Mailer.deliver_supplier_lead(supplier, @x)
     end
   end
 end

@@ -15,11 +15,8 @@ class SizingsController < ApplicationController
   def create
     @sizing = @postcode.build_sizing(params[:sizing])
     if @sizing.save
-      @postcode.distribute_leads
-      @postcode.suppliers.each do |supplier|
-      Mailer.deliver_supplier_lead(supplier, @postcode)
-      end
-      Mailer.deliver_thankyou(@postcode)
+      @postcode.distribute_leads            # lots of code in the Postcode controller to do this.
+      Mailer.deliver_thankyou(@postcode)    # send a ThankYou
       redirect_to new_postcode_free_report_path(@postcode)
     else
       render :action => 'new'

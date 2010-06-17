@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Another lead from mysolarprice.com.au</title>
+</head>
+<body>
+  <p>First Name: <%= @x.site_details.first_name%></p>     <!-- notice it's a NESTED reference. We passed in @postcode and we get the rest -->
+  <p>Postcode: <%= @x.postcode%></p>
+  <p>Products: <%= @x.select_products.products%></p>
+    <!-- multiple go here -->
+  <p>Products: <%= @x.select_products.timeframe%></p>
+
+  <p>Quote Type: <%= @x.site_details.quote_type%></p>
+    <!-- multiple go here -->
+  <p>First Name: <%= @x.site_details.first_name%></p>
+  <p>Last Name: <%= @x.site_details.last_name%></p>
+  <p>Email Address: <%= @x.site_details.email%></p>
+  <p>Street Address: <%= @x.site_details.street_address%></p>
+  <p>Suburb: <%= @x.site_details.suburb%></p>
+  <p>State: <%= @x.site_details.state%></p>
+  <p>Postcode: <%= @x.site_details.postcode%></p>
+  <p>Country: <%= @x.site_details.country%></p>
+
+  <p>Roof Type: <%= @x.site_survey.roof_type%></p>
+  <p>Meterage OK for solar power?: <%= @x.site_survey.meterage_ok_solar_power%></p>
+  <p>Meterage OK for solar hot water?: <%= @x.site_survey.meterage_ok_solar_hot_water%></p>
+  <p>Approximate roof slope: <%= @x.site_survey.approximate_roof_slope%></p>
+  <p>Percentage Share on North Facing Roof: <%= @x.site_survey.percentage_shade_on_north_facing_roof%></p>
+  <p>House Hieght (stories): <%= @x.site_survey.house_stories%></p>
+  <p>Unique Features: <%= @x.site_survey.unique_features%></p>
+
+  <p>Number of people in the home: <%= @x.sizing.number_of_people_in_home%></p>
+  <p>Current HWS type: <%= @x.sizing.current_hw_type%></p>
+  <p>Current HWS size: <%= @x.sizing.current_hw_size%></p>
+  <p>Current HWS location: <%= @x.sizing.current_hw_location%></p>
+  <p>Electricity bill (quarterly): <%= @x.sizing.last_quarter_elec_bill%></p>
+  <p>Preferred Solare Power Size: <%= @x.sizing.preferred_solar_power_size%></p>
+</body>
+</html>
