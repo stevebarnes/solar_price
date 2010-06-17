@@ -1,0 +1,12 @@
+# password: "secret"
+steve:
+  username: steve
+  email: test1@busigeeks.com.au
+  password_hash: 3488f5f7efecab14b91eb96169e5e1ee518a569f
+  password_salt: bef65e058905c379436d80d1a32e7374b139e7b0
+
+admin:
+  username: admin
+  email: steve@busigeeks.com.au
+  password_hash: 3488f5f7efecab14b91eb96169e5e1ee518a569f
+  password_salt: bef65e058905c379436d80d1a32e7374b139e7b0

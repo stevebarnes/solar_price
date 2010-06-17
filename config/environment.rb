@@ -23,6 +23,7 @@ Rails::Initializer.run do |config|
 #  config.gem "authlogic"
 #  config.gem "acts_as_tree"
 #  config.gem "haml"
+#config.gem "webrat"
   
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named

@@ -2,6 +2,7 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
+  include Authentication
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
 
@@ -12,6 +13,4 @@ class ApplicationController < ActionController::Base
     @postcode = Postcode.find_by_id(params[:postcode_id])
     redirect_to new_postcode_path unless @postcode # if url string is hacked, go back to start page
   end
-  
-
 end
