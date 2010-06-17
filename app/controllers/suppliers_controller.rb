@@ -16,8 +16,8 @@ class SuppliersController < ApplicationController
     @supplier = Supplier.new(params[:supplier])
     @supplier.active = false
     if @supplier.save
-      flash[:notice] = "Successfully created supplier."
-      redirect_to @supplier
+      flash[:notice] = "Thank you for applying. We will be in touch soon."
+      redirect_to root_path
     else
       render :action => 'new'
     end
