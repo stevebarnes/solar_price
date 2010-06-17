@@ -10,7 +10,7 @@ class CreateSuppliers < ActiveRecord::Migration
       t.string :suburb
       t.string :state
       t.string :country
-      t.boolean :active
+      t.boolean :active, :default => false
       t.string :postcodes_requested
       t.integer :hits_for_month, :default => 0
       t.integer :hits_cumulative, :default => 0
