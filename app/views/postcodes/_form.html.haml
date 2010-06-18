@@ -1,5 +1,6 @@
 - form_for @postcode do |f|
-  = f.error_messages
+  %div#flash
+    = f.error_messages
   %p
     = f.text_field :postcode, :size=>8
   %p

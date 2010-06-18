@@ -207,6 +207,14 @@ p{
 /*** OTHER                                                 ***/
 /*************************************************************/
 
+
+#flash{
+  top: 5px;
+  margin: auto;
+  position: absolute;
+}
+
+
 #flash_notice, #flash_error {
   padding: 5px 8px;
   margin: 10px 0;
@@ -222,11 +230,14 @@ p{
   border: solid 1px #C66;
 }
 
+
+/*****************/
+
 .fieldWithErrors {
-  display: inline;
+  display: inherit ;
 }
 
-#errorExplanation {
+/*#errorExplanation {
   width: 400px;
   border: 2px solid #CF0000;
   padding: 0px;
@@ -243,6 +254,49 @@ p{
   margin: 0;
   background-color: #c00;
   color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 8px;
+}
+
+#errorExplanation ul {
+  margin: 2px 24px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: disc;
+}
+*/
+
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid #1d65b5;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  height: 0px;
+  text-align: left;
+  font-weight: bold;
+  padding: 0px;
+  /*padding: 5px 5px 5px 15px;*/
+  font-size: 12px;
+  margin: 0;
+  background-color: #1d65b5;
+  color: #F0F0F0;
+  background: none;
+}
+
+p {
+  margin-top: 5px;
 }
 
 #errorExplanation p {

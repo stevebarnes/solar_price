@@ -1,5 +1,6 @@
 - form_for [@postcode, @select_product] do |f|
-  = f.error_messages
+  %div#flash
+    = f.error_messages
   %div#product_choice
     %h2
       Are you interested in Solar Hot Water or Solar Power?

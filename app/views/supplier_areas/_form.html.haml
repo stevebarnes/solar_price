@@ -1,5 +1,6 @@
 - form_for @supplier_area do |f|
-  = f.error_messages
+  %div#flash
+    = f.error_messages
   %p
     = f.label :postcode
     %br

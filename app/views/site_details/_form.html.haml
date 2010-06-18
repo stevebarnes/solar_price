@@ -1,5 +1,6 @@
 - form_for [@postcode, @site_details] do |f|
-  = f.error_messages
+  %div#flash
+    = f.error_messages
   %div#site_details
     %h2
       Do you want someone to quote on-site?
@@ -24,7 +25,7 @@
       = f.text_field :last_name, :size => "16"
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       = f.label :email
-      = f.text_field :email, :size => "27"
+      = f.text_field :email, :size => "20"
   %p
     %span#address
     %br
