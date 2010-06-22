@@ -2,40 +2,39 @@
   %div#flash
     = f.error_messages
   %p
-    = f.label :name
-    %br
-    = f.text_field :name
+    Name:
+    &nbsp;&nbsp;
+    = f.text_field :name, :size => "33"
   %p
-    = f.label :first_name
-    %br
-    = f.text_field :first_name
-  %p
-    = f.label :last_name
-    %br
-    = f.text_field :last_name
-  %p
-    = f.label :abn
-    %br
-    = f.text_field :abn
-  %p
-    = f.label :phone
-    %br
-    = f.text_field :phone
-  %p
-    = f.label :email
-    %br
-    = f.text_field :email
-  %p
-    = f.label :suburb
-    %br
-    = f.text_field :suburb
-  %p
-    = f.label :state
-    %br
-    = f.text_field :state
-  %p
-    = f.label :active
-    %br
-    = f.check_box :active
-  %p
-    = f.submit
+    Contact:
+    = f.text_field :first_name, :size => "15"
+    = f.text_field :last_name, :size => "15"
+  %div.supp-l
+    %p
+      = f.label :abn
+      %br
+      = f.text_field :abn, :size => "12"
+    %p
+      = f.label :phone
+      %br
+      = f.text_field :phone, :size => "12"
+    %p
+      = f.label :email
+      %br
+      = f.text_field :email, :size => "25"
+    %p
+      = f.label :suburb
+      %br
+      = f.text_field :suburb, :size => "12"
+      = f.select :state, [["QLD","QLD"],["N.S.W","N.S.W."],["N.T.","N.T."],["S.A","S.A."],["TAS", "TAS"],["VIC", "VIC"],["W.A.", "W.A."]]
+  %div.supp-r
+    %p
+      = f.label :active
+      %br
+      = f.check_box :active
+    %p
+      = f.label :credit
+      %br
+      = f.text_field :credit, :size => "6"
+  %div.nextdiv
+    = image_submit_tag("/images/btn_next.png")

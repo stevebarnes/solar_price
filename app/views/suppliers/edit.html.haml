@@ -1,8 +1,10 @@
-- title "Edit Supplier"
+%div#subsequentpages
+  %div#container
+    %h2
+      Edit Supplier
+    = render :partial => 'form'
 
-= render :partial => 'form'
-
-%p
-  = link_to "Show", supplier_path(@supplier)
-  |
-  = link_to "View All", suppliers_path
+    %p
+      = link_to "Show", supplier_path(@supplier)
+      |
+      = link_to "View All", suppliers_path
