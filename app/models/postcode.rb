@@ -16,8 +16,7 @@ class Postcode < ActiveRecord::Base
   end
 
   def distribute_leads
-    matched = Supplier.find(:all, :include=>:supplier_areas, :conditions=>{:supplier_areas=>{:postcode=>postcode}, :active=> true}, :order=>"suppliers.hits_for_month", :limit=>3)
-
+    matched = Supplier.find(:all, :include=>:supplier_areas, :conditions=>{:supplier_areas=>{:postcode=>postcode}, :active=> true, :suppliers=>{:credit => 'gt 0'}}, :order=>"suppliers.hits_for_month", :limit=>3)
     if matched.length <3
       # not enough matches for customer query
       @x = self
