@@ -1,40 +1,49 @@
-- form_for @supplier do |f|
-  = f.error_messages
-  %p
-    = f.label :name
-    %br
-    = f.text_field :name
-  %p
-    = f.label :first_name
-    %br
-    = f.text_field :first_name
-  %p
-    = f.label :last_name
-    %br
-    = f.text_field :last_name
-  %p
-    = f.label :abn
-    %br
-    = f.text_field :abn
-  %p
-    = f.label :phone
-    %br
-    = f.text_field :phone
-  %p
-    = f.label :email
-    %br
-    = f.text_field :email
-  %p
-    = f.label :suburb
-    %br
-    = f.text_field :suburb
-  %p
-    = f.label :state
-    %br
-    = f.text_field :state
-  %p
-    = f.label "Postcodes you would like to cover"
-    %br
-    = f.text_field :postcodes_requested
-  %p
-    = f.submit
+%div#subsequentpages
+  %div#container
+    - form_for @supplier do |f|
+      = f.error_messages
+      %h2
+        Business Details
+      %div#bus-dtls
+        %p
+          Business Name
+          %br
+          = f.text_field :name
+          &nbsp;&nbsp;&nbsp;
+          A.B.N.
+          = f.text_field :abn, :size => "13"
+      %h2
+        Contact Details
+      %div#supp-wide
+        %div.supp-new-l
+          %p
+            Contact Name
+            %br
+            = f.text_field :first_name, :size => "13"
+            = f.text_field :last_name, :size => "13"
+          %p
+            = f.label :phone
+            %br
+            = f.text_field :phone, :size => "13"
+        %div.supp-new-r
+          %p
+            = f.label :email
+            %br
+            = f.text_field :email
+          %p
+            = f.label :suburb
+            %br
+            = f.text_field :suburb, :size => "21"
+            = f.select :state, [["QLD","QLD"],["N.S.W","N.S.W."],["N.T.","N.T."],["S.A","S.A."],["TAS", "TAS"],["VIC", "VIC"],["W.A.", "W.A."]]
+      %h2
+        Coverage Details
+      %div#coverage
+        %div#postcodes
+          %p
+            = f.label "Postcodes you would like to cover."
+            = f.label "NOTE: please separate these with a comma."
+            = f.label "for example, 4001, 4002, 4003"
+            %br
+            = f.text_area :postcodes_requested, :size => '80x2'
+      %div.nextdiv
+        = image_submit_tag("/images/btn_next.png")

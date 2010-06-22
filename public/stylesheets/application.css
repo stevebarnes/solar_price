@@ -50,6 +50,53 @@ a {
   padding-top: 90px;
 }
 
+#container td {
+  color:#161616;
+  font-family:Verdana,Helvetica,Arial;
+  font-size: 13px;
+  font-weight: normal;
+}
+#container th {
+  color:#161616;
+  font-family:Verdana,Helvetica,Arial;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+/*************************************************************/
+/*** NEW SUPPLIER PAGE                                     ***/
+/*************************************************************/
+/*#postcodes{
+  height: 150px;
+}*/
+#new_supplier{
+  padding-left: 20px;
+}
+
+#bus-dtls{
+  padding-left: 55px;
+}
+#supp-wide{
+  width: 780px;
+  height: 105px;
+}
+#coverage{
+  width: 780px;
+  height: 90px;
+  margin: 0px;
+  padding-left: 55px;
+}
+.supp-new-l{
+  width: 325px;
+  height: 95px;
+  float: left;
+  padding-left: 55px;
+}
+.supp-new-r{
+  width: 380px;
+  height: 95px;
+  float: right;
+}
 /*************************************************************/
 /*** POSTCODE PAGE                                         ***/
 /*************************************************************/
