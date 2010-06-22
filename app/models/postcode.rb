@@ -18,7 +18,11 @@ class Postcode < ActiveRecord::Base
   def distribute_leads
     matched = Supplier.find(:all, :include=>:supplier_areas, :conditions=>{:supplier_areas=>{:postcode=>postcode}, :active=> true}, :order=>"suppliers.hits_for_month", :limit=>3)
 
-    puts "Not enough" if matched.length <3    # temporary code. Identifies not enough matches.
+    if matched.length <3
+      # not enough matches for customer query
+      @x = self
+      Mailer.deliver_underserviced(@x)
+    end
 
     self.suppliers = matched   # get this POSTCODE entry to relate to SUPPLIERS through the info in MATCHED
     @x = self
