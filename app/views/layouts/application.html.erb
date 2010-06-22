@@ -8,9 +8,9 @@
   </head>
   <body>
     <div id="pageback">
-      <%#- flash.each do |name, msg| -%>
-        <%#= content_tag :div, msg, :id => "flash_#{name}" %>
-      <%#- end -%>
+<%#- flash.each do |name, msg| -%>
+<%#= content_tag :div, msg, :id => "flash_#{name}" %>
+<%#- end -%>
 
       <%- if show_title? -%>
         <h1><%=h yield(:title) %></h1>
@@ -18,10 +18,13 @@
 
       <%= yield %>
     </div>
-    <% if logged_in?  %>
-      <%= link_to "Suppliers", suppliers_path %>
-      <%= link_to "Logout", logout_path %>
 
+    <% if logged_in?  %>
+      <div id="admin_menu">
+        <%= link_to "Suppliers", suppliers_path %>
+        <%= link_to "Logout", logout_path %>
+      </div>
     <% end %>
+
   </body>
 </html>

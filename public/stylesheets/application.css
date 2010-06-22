@@ -342,3 +342,23 @@ p {
   font-size: 12px;
   list-style: disc;
 }
+
+
+
+
+#admin_menu {
+  color: white;
+  height:30px;
+  margin-left:auto;
+  margin-right:auto;
+  width:785px;
+  border-top: 2px silver solid;
+  background-color: red;
+  text-align: right;
+  padding-right: 15px;
+  padding-top: 5px;
+}
+
+#admin_menu a {
+  color: white;
+}
