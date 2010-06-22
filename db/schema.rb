@@ -102,6 +102,7 @@ ActiveRecord::Schema.define(:version => 20100617033011) do
     t.string   "postcodes_requested"
     t.integer  "hits_for_month",      :default => 0
     t.integer  "hits_cumulative",     :default => 0
+    t.integer  "credit",              :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
