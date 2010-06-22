@@ -2,6 +2,14 @@ ENV["RAILS_ENV"] = "test"
 require File.expand_path(File.dirname(__FILE__) + "/../config/environment")
 require 'test_help'
 
+require "webrat"
+require "shoulda"
+
+
+Webrat.configure do |config|
+  config.mode = :rails   # use rtails testing instead of alternative, Selinium
+end
+
 class ActiveSupport::TestCase
   # Transactional fixtures accelerate your tests by wrapping each test method
   # in a transaction that's rolled back on completion.  This ensures that the
