@@ -28,13 +28,14 @@
       = f.text_field :suburb, :size => "12"
       = f.select :state, [["QLD","QLD"],["N.S.W","N.S.W."],["N.T.","N.T."],["S.A","S.A."],["TAS", "TAS"],["VIC", "VIC"],["W.A.", "W.A."]]
   %div.supp-r
-    %p
-      = f.label :active
-      %br
-      = f.check_box :active
-    %p
-      = f.label :credit
-      %br
-      = f.text_field :credit, :size => "6"
+    %div.supp-controls
+      %p
+        = f.label :active
+        %br
+        = f.check_box :active
+      %p
+        = f.label :credit
+        %br
+        = f.text_field :credit, :size => "6"
   %div.nextdiv
     = image_submit_tag("/images/btn_next.png")
