@@ -6,4 +6,4 @@ vendor/plugin/haml
 config/database.yml
 config/settings.yml
 tmp/restart.txt
-
+tmp/webrat*
