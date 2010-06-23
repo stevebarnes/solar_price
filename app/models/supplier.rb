@@ -20,4 +20,9 @@ class Supplier < ActiveRecord::Base
   def postcodes_requested=(requested)
     @requested = requested
   end
+
+  def postcodes
+    supplier_areas.map(&:postcode).join ", "
+#    supplier_areas.map {|x| x.postcode}.join ", "   is long hand for the line above
+  end
 end
