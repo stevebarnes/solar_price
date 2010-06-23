@@ -11,6 +11,10 @@ class Postcode < ActiveRecord::Base
 
   validate :check_postcode
 
+  def postcodes
+
+  end
+
   def check_postcode
     errors.add_to_base("Please supply a postcode") if self.postcode.empty?
   end

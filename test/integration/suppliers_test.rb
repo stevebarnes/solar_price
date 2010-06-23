@@ -26,6 +26,12 @@ class SuppliersTest < ActionController::IntegrationTest
       assert_path suppliers_path
     end
 
+    should "edit supplier" do
+      supplier_1 = suppliers :one
+      visit edit_supplier_path(supplier_1)
+      click_button :next
+    end
+
     should "list suppliers" do
       assert_path suppliers_path
     end

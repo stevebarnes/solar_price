@@ -37,5 +37,10 @@
         = f.label :credit
         %br
         = f.text_field :credit, :size => "6"
+      %p
+        - for area in @supplier.supplier_areas
+          = area.postcode
+          = check_box_tag "supplier[postcodes_change][]", area.id, true
+
   %div.nextdiv
-    = image_submit_tag("/images/btn_next.png")
+    = image_submit_tag("/images/btn_next.png", :id=>:next)
