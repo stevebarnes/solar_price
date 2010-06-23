@@ -9,6 +9,7 @@ one:
   state: "QLD"
   country: "Australia"
   active: true
+  credit: 10
 
 two:
   name: "S2"
@@ -21,6 +22,8 @@ two:
   state: "QLD"
   country: "Australia"
   active: true
+  credit: 10
+
 three:
   name: "S3"
   first_name: "Sam"
@@ -32,6 +35,8 @@ three:
   state: "QLD"
   country: "Australia"
   active: true
+  credit: 10
+
 four:
   name: "S4"
   first_name: "Sam"
@@ -43,3 +48,4 @@ four:
   state: "QLD"
   country: "Australia"
   active: true
+  credit: 10

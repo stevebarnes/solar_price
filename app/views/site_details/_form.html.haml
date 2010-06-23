@@ -21,8 +21,8 @@
       Your Details
     %p
       = f.label "Name"
-      = f.text_field :first_name, :size => "14"
-      = f.text_field :last_name, :size => "16"
+      = f.text_field :first_name, :size => "14", :id => :first_name
+      = f.text_field :last_name, :size => "16", :id => :last_name
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       = f.label :email
       = f.text_field :email, :size => "20"
@@ -33,7 +33,7 @@
       Installation Address
   %p
     = f.label :street_address
-    = f.text_field :street_address, :size => "27"
+    = f.text_field :street_address, :size => "27", :id => :street_address
   %p
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     = f.label :suburb
@@ -42,4 +42,4 @@
     = f.label :state
     = f.select :state, [["QLD","QLD"],["N.S.W","N.S.W."],["N.T.","N.T."],["S.A","S.A."],["TAS", "TAS"],["VIC", "VIC"],["W.A.", "W.A."]]
   %div.nextdiv
-    = image_submit_tag("/images/btn_next.png")
+    = image_submit_tag("/images/btn_next.png", :id=>:next)

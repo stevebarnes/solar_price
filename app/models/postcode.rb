@@ -16,7 +16,8 @@ class Postcode < ActiveRecord::Base
   end
 
   def distribute_leads
-    matched = Supplier.find(:all, :include=>:supplier_areas, :conditions=>{:supplier_areas=>{:postcode=>postcode}, :active=> true, :suppliers=>{:credit => 'gt 0'}}, :order=>"suppliers.hits_for_month", :limit=>3)
+    matched = Supplier.matched(self.postcode)
+
     if matched.length <3
       # not enough matches for customer query
       @x = self
@@ -26,9 +27,7 @@ class Postcode < ActiveRecord::Base
     self.suppliers = matched   # get this POSTCODE entry to relate to SUPPLIERS through the info in MATCHED
     @x = self
 
-#    p "here"
     matched.each do |supplier|    # ARE WE PASSING IN A "matched" ROW/OBJECT AND CALLING IT "supplier" here?
-#      p supplier.hits_for_month
       supplier.update_attributes(:hits_for_month => supplier.hits_for_month + 1, :hits_cumulative => supplier.hits_cumulative + 1, :credit => supplier.credit - 1)
       # SO THE LINE ABOVE, I USE "supplier." DOES THAT MEAN SUPPLIER PASSED IN OR SUPPLIER MODEL? SHOULD WE CHANGE PASSED IN NAME?
       #

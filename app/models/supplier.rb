@@ -6,6 +6,11 @@ class Supplier < ActiveRecord::Base
 
   after_create :store_postcodes
 
+  def self.matched postcode
+#      find(:all, :include=>:supplier_areas, :conditions=>{:supplier_areas=>{:postcode=>postcode}, :active=> true, :suppliers=>{:credit => 'gt 0'}}, :order=>"suppliers.hits_for_month", :limit=>3)
+      find(:all, :include=>:supplier_areas, :conditions=>["supplier_areas.postcode=? and active = ? and suppliers.credit > 0", postcode, true ], :order=>"suppliers.hits_for_month", :limit=>3)
+  end
+
   def store_postcodes
     @requested.split(",").each do |x|
       supplier_areas.create(:postcode=>x.strip)
