@@ -32,8 +32,7 @@ class Postcode < ActiveRecord::Base
       # SO THE LINE ABOVE, I USE "supplier." DOES THAT MEAN SUPPLIER PASSED IN OR SUPPLIER MODEL? SHOULD WE CHANGE PASSED IN NAME?
       #
       # do email to supplier whilst I have the supplier record and Postcode context
-      @supplier = supplier
-      Mailer.deliver_supplier_lead(@supplier)
+      Mailer.deliver_supplier_lead(self, supplier)
 #      Mailer.deliver_supplier_lead(supplier, @x)
     end
   end

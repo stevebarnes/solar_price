@@ -1,5 +1,5 @@
 class Mailer < ActionMailer::Base
-  def supplier_lead(postcode, sent_at = Time.now)
+  def supplier_lead(postcode, supplier, sent_at = Time.now)
     subject    'New lead from mysolarprice.com.au'
     recipients 'test1@busigeeks.com.au'
 #    from       'lead-generator@mysolarprice.com.au'
