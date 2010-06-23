@@ -4,7 +4,7 @@ class Supplier < ActiveRecord::Base
   has_many :supplier_leads
   has_many :postcodes, :through =>:supplier_leads
 
-  after_create :store_postcodes
+  after_save :store_postcodes
 
   def self.matched postcode
 #      find(:all, :include=>:supplier_areas, :conditions=>{:supplier_areas=>{:postcode=>postcode}, :active=> true, :suppliers=>{:credit => 'gt 0'}}, :order=>"suppliers.hits_for_month", :limit=>3)

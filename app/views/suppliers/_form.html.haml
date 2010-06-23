@@ -41,6 +41,8 @@
         - for area in @supplier.supplier_areas
           = area.postcode
           = check_box_tag "supplier[postcodes_change][]", area.id, true
+      %p
+        = f.text_area :postcodes_requested, :size => '40x2'
 
   %div.nextdiv
     = image_submit_tag("/images/btn_next.png", :id=>:next)
