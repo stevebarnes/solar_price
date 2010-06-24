@@ -12,7 +12,7 @@ class Supplier < ActiveRecord::Base
   end
 
   def store_postcodes
-    @requested.split(",").each do |x|
+    (@requested || "").split(",").each do |x|
       supplier_areas.create(:postcode=>x.strip)
     end
   end

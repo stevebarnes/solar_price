@@ -10,6 +10,7 @@ one:
   country: "Australia"
   active: true
   credit: 10
+  hits_for_month: 30
 
 two:
   name: "S2"
@@ -23,6 +24,7 @@ two:
   country: "Australia"
   active: true
   credit: 10
+  hits_for_month: 30
 
 three:
   name: "S3"
@@ -36,6 +38,7 @@ three:
   country: "Australia"
   active: true
   credit: 10
+  hits_for_month: 30
 
 four:
   name: "S4"
@@ -49,3 +52,4 @@ four:
   country: "Australia"
   active: true
   credit: 10
+  hits_for_month: 30
