@@ -5,6 +5,7 @@ class Mailer < ActionMailer::Base
 #    from       'lead-generator@mysolarprice.com.au'
     from       'test1@busigeeks.com.au'
     sent_on    sent_at
+    content_type  "text/html"
     body       :x => postcode, :y => supplier
   end
 
@@ -14,6 +15,7 @@ class Mailer < ActionMailer::Base
 #    from       'lead-generator@mysolarprice.com.au'
     from       'test1@busigeeks.com.au'
     sent_on    sent_at
+    content_type  "text/html"
     body       :x => postcode
   end
 
@@ -22,6 +24,7 @@ class Mailer < ActionMailer::Base
     recipients postcode.site_details.email; 'leadhistory@mysolarprice.com.au'
     from       'test1@busigeeks.com.au'
     sent_on    sent_at
+    content_type  "text/html"
     body       :x => postcode
   end
 
@@ -30,6 +33,7 @@ class Mailer < ActionMailer::Base
     recipients postcode.site_details.email; 'leadhistory@mysolarprice.com.au'
     from       'test1@busigeeks.com.au'
     sent_on    sent_at
+    content_type  "text/html"
     body       :x => postcode
   end
 end
