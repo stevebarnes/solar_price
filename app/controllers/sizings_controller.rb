@@ -15,9 +15,14 @@ class SizingsController < ApplicationController
   def create
     @sizing = @postcode.build_sizing(params[:sizing])
     if @sizing.save
-      @postcode.distribute_leads            # lots of code in the Postcode controller to do this.
-      Mailer.deliver_thankyou(@postcode)    # send a ThankYou
-      redirect_to new_postcode_free_report_path(@postcode)
+      if @postcode.select_product.timeframe != "99"    # 99 is just a tyre kicker, don't send out the leads
+        @postcode.distribute_leads            # lots of code in the Postcode controller to do this.
+        Mailer.deliver_thankyou(@postcode)    # send a ThankYou
+        redirect_to new_postcode_free_report_path(@postcode)
+      else
+        flash[:notice] = "Thank you for choosing mysolarprice.com.au"
+        redirect_to root_path
+      end
     else
       render :action => 'new'
     end
