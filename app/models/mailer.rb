@@ -1,16 +1,16 @@
 class Mailer < ActionMailer::Base
   def supplier_lead(postcode, supplier, sent_at = Time.now)
     subject    'New lead from mysolarprice.com.au'
-    recipients 'test1@busigeeks.com.au'
+    recipients supplier.email; 'leadhistory@mysolarprice.com.au'
 #    from       'lead-generator@mysolarprice.com.au'
     from       'test1@busigeeks.com.au'
     sent_on    sent_at
-    body       :x => postcode
+    body       :x => postcode, :y => supplier
   end
 
   def underserviced(postcode, sent_at = Time.now)
     subject    'Insufficient matches for mysolarprice.com.au query'
-    recipients 'test1@busigeeks.com.au'
+    recipients 'leadhistory@mysolarprice.com.au'
 #    from       'lead-generator@mysolarprice.com.au'
     from       'test1@busigeeks.com.au'
     sent_on    sent_at
@@ -19,7 +19,7 @@ class Mailer < ActionMailer::Base
 
   def thankyou(postcode, sent_at = Time.now)
     subject    'Thankyou for using mysolarprice.com.au'
-    recipients postcode.site_details.email
+    recipients postcode.site_details.email; 'leadhistory@mysolarprice.com.au'
     from       'test1@busigeeks.com.au'
     sent_on    sent_at
     body       :x => postcode
@@ -27,7 +27,7 @@ class Mailer < ActionMailer::Base
 
   def free_report(postcode, sent_at = Time.now)
     subject    'Here is your free report from mysolarprice.com.au'
-    recipients postcode.site_details.email
+    recipients postcode.site_details.email; 'leadhistory@mysolarprice.com.au'
     from       'test1@busigeeks.com.au'
     sent_on    sent_at
     body       :x => postcode

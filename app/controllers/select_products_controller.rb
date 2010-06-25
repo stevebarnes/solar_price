@@ -17,9 +17,6 @@ class SelectProductsController < ApplicationController
     @select_product = @postcode.build_select_product(params[:select_product])
     if @select_product.save
       redirect_to new_postcode_site_detail_path(@postcode)
-#      redirect_to :controller => "site_details", :action => "new"
-#      flash[:notice] = "Successfully created select product."
-#      redirect_to @select_product
     else
       render :action => 'new'
     end

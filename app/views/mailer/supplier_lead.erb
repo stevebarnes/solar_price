@@ -5,10 +5,35 @@
 <title>Another lead from mysolarprice.com.au</title>
 </head>
 <body>
-  <p>Dear <%= @x.site_details.first_name%>,</p>
-  <p>You have postcode <%=@x.postcode%> </p>
-  <p>First Name: <%= @x.site_details.first_name%></p>     <!-- notice it's a NESTED reference. We passed in @postcode and we get the rest -->
-  <p>Postcode: <%= @x.postcode%></p>
+  <p>Dear <%= @y.first_name%>,</p>
+  <p>Here is your lead from mysolarprice.com.au:</p>
+  <br/>
+  <p>Name: <%= @x.site_details.first_name%> <%= @x.site_details.last_name%></p>
+
   <p>Products: <%= @x.select_product.product %></p>
+  <p>Timeframe: <%= @x.select_product.timeframe %></p>
+  <br/>
+  <p>Quote type: <%= @x.site_details.quote_type%>
+  <p>Email: <%= @x.site_details.email%>
+  <p>Street Address : <%= @x.site_details.street_address%>
+  <p>Suburb : <%= @x.site_details.suburb%>
+  <p>State : <%= @x.site_details.state%>
+  <p>Postcode : <%= @x.postcode%>
+  <br/>
+  <p>Roof Type: <%= @x.site_survey.roof_type%>
+  <p>Solar Power meterage OK? : <%= @x.site_survey.meterage_ok_solar_power%>
+  <p>Solar H.W. meterage OK?: <%= @x.site_survey.meterage_ok_solar_hot_water%>
+  <p>Approx Roof Slope: <%= @x.site_survey.approximate_roof_slope%>
+  <p>Pct Shade on North Roof: <%= @x.site_survey.percentage_shade_on_north_facing_roof%>
+  <p>House Stories : <%= @x.site_survey.house_stories%>
+  <p>Unique Features: <%= @x.site_survey.unique_features%>
+  <br/>
+  <p># People in Home: <%= @x.sizing.number_of_people_in_home%>
+  <p>Current H.W. Type: <%= @x.sizing.current_hw_type%>
+  <p>Current H.W. Size: <%= @x.sizing.current_hw_size%>
+  <p>Current H.W. Location: <%= @x.sizing.current_hw_location%>
+  <p>Electricity Bill Last Quarter: <%= @x.sizing.last_quarter_elec_bill%>
+  <p>Preferred Solar Power Unit Size: <%= @x.sizing.preferred_solar_power_size%>
+
 </body>
 </html>
