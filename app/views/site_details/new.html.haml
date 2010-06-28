@@ -1,5 +1,49 @@
 %div#subsequentpages
   %div#container
-    = render :partial => 'form'
+    - form_for [@postcode, @site_details] do |f|
+      %div#flash
+        = f.error_messages
+      %div#site_details
+        %h2
+          Do you want someone to quote on-site?
+        %p
+          Costs for installation of solar power can vary considerably depending on factors such as:
+          available roof space, orientation, shading, roof pitch, existing power boards, access to roof (height) and roof material.
+        %p
+          %span.option_label
+            = f.radio_button :quote_type, "Onsite Personal Quote"
+            = f.label "Onsite Personal Quote"
+            %br
+          %span.option_label
+            = f.radio_button :quote_type, "Email or Phone Quote at this stage please"
+            = f.label "Email or Phone Quote at this stage please"
+      %p
+        %br
+        %h3
+          Your Details
+        %p
+          = f.label "Name"
+          = f.text_field :first_name, :size => "14", :id => :first_name
+          = f.text_field :last_name, :size => "16", :id => :last_name
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          = f.label :email
+          = f.text_field :email, :size => "20"
+      %p
+        %span#address
+        %br
+        %h3
+          Installation Address
+      %p
+        = f.label :street_address
+        = f.text_field :street_address, :size => "27", :id => :street_address
+      %p
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        = f.label :suburb
+        = f.text_field :suburb, :size => "27"
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        = f.label :state
+        = f.select :state, [["QLD","QLD"],["N.S.W","N.S.W."],["N.T.","N.T."],["S.A","S.A."],["TAS", "TAS"],["VIC", "VIC"],["W.A.", "W.A."]]
+      %div.nextdiv
+        = image_submit_tag("/images/btn_next.png", :id=>:next)
 
 

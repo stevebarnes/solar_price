@@ -1,3 +1,70 @@
 %div#subsequentpages
   %div#container
-    = render :partial => 'form'
+    - form_for [@postcode, @site_survey] do |f|
+      = f.error_messages
+      %h2
+        Site Details
+      %p
+        = f.label :roof_type
+        = f.select :roof_type, [["Colorbond","Colorbond"],["tile","tile"],["asbestos","asbestos"],["other","other"]]
+      %p
+        Your North Facing Roof is important. Please answer the following (as applicable):
+
+      - if @postcode.select_product.product_se
+        %div.survey-l
+          %h3
+            SOLAR POWER
+          %p
+            %span.option_label
+              = f.radio_button :meterage_ok_solar_power, "Solar Power not applicable"
+              = f.label "not applicable"
+            %br
+            %span.option_label
+              = f.radio_button :meterage_ok_solar_power, "Solar Power under 10sqm"
+              = f.label "under 10sqm"
+            %br
+            %span.option_label
+              = f.radio_button :meterage_ok_solar_power, "Solar Power over 10sqm"
+              = f.label "over 10sqm"
+
+      - if @postcode.select_product.product_shw
+        %div.survey-r
+          %h3
+            SOLAR HOT WATER
+          %p
+            %span.option_label
+              = f.radio_button :meterage_ok_solar_hot_water, "Solar Hot Water not applicable"
+              = f.label "not applicable"
+            %br
+            %span.option_label
+              = f.radio_button :meterage_ok_solar_hot_water, "Solar Hot Water under 3sqm"
+              = f.label "under 3sqm"
+            %br
+            %span.option_label
+              = f.radio_button :meterage_ok_solar_hot_water, "Solar Hot Water over 3sqm"
+              = f.label "over 3sqm"
+      %div.survey-roof
+        %h3
+          MORE ABOUT YOUR ROOF
+        %p
+          = f.label :approximate_roof_slope
+          %br
+          = f.select :approximate_roof_slope, [["flat","flat"],["15-30 degrees","15-30 degrees"],["30+ degrees","30+ degrees"]]
+        %p
+          = f.label :percentage_shade_on_north_facing_roof
+          %br
+          = f.select :percentage_shade_on_north_facing_roof, [["none","none"],["30%","30%"],["60%","60%"],["100%","100%"]]
+        %p
+          = f.label :house_stories
+          %br
+          = f.select :house_stories, [["single","1"],["2","2"],["3","3"],["4+","4+"]]
+      %div.survey-other
+        %h3
+          UNIQUE FEATURES?
+        %p
+          %p
+            Any other unique features about your roof or site?
+            %br
+            = f.text_area :unique_features, :rows=>4, :cols=>40
+    %div.nextdiv
+      = image_submit_tag("/images/btn_next.png", :id => :next)
