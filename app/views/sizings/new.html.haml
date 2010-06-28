@@ -1,3 +1,41 @@
 %div#subsequentpages
   %div#container
-    = render :partial => 'form'
+    - form_for [@postcode, @sizing] do |f|
+      %div#flash
+        = f.error_messages
+      %div#surveys
+        - if @postcode.select_product.product_se
+          %div.survey-l
+            %h3
+              SOLAR POWER
+            %p
+              = f.label :last_quarter_elec_bill
+              %br
+              = f.select :last_quarter_elec_bill, [["$0 to $100","<100"],["$100 to $400","<400"],["$400 to $600","<600"],["$600 plus","600+"]]
+            %p
+              = f.label :preferred_solar_power_size
+              %br
+              = f.select :preferred_solar_power_size, [["0 to 1kw","<0 to 1kw"],["1.5kw","1.5kw"],["2.0kw","2.0kw"],["3.0kw","3.0kw"],["4.okw","4.0kw"]]
+        - if @postcode.select_product.product_shw
+          %div.survey-r
+            %h3
+              SOLAR HOT WATER
+            %p
+              = f.label :number_of_people_in_home
+              %br
+              = f.select :number_of_people_in_home, [["0-1","1"],["2","2"],["3","3"],["4","4"],["5","5"],["6","6"],["7+","7+"]]
+            %p
+              %b
+                About your current Hot Water system:
+            %div#current-hw
+              %p
+                = f.label "Hot Water system Type"
+                = f.select :current_hw_type, [["Natural Gas","Natural Gas"],["Instantaneous Gas","Instantaneous Gas"],["Bottled Gas","Bottled Gas"],["Heat Pump","Heat Pump"],["Electric","Electric"],["Solar","Solar"]]
+              %p
+                = f.label "Hot Water system size"
+                = f.select :current_hw_size, [["0-80L"],["80-160L"],["over 160L"]]
+              %p
+                = f.label "Hot Water system location"
+                = f.select :current_hw_location, [["Inside"],["Outside"],["In Roof"],["On Roof"]]
+      %div.nextdiv
+        = image_submit_tag("/images/btn_next.png", :id=>:next)
