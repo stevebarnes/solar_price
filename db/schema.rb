@@ -25,7 +25,8 @@ ActiveRecord::Schema.define(:version => 20100617033011) do
   end
 
   create_table "select_products", :force => true do |t|
-    t.string   "product"
+    t.boolean  "product_se"
+    t.boolean  "product_shw"
     t.string   "timeframe"
     t.integer  "postcode_id"
     t.datetime "created_at"

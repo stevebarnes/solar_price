@@ -1,7 +1,8 @@
 class CreateSelectProducts < ActiveRecord::Migration
   def self.up
     create_table :select_products do |t|
-      t.string :product
+      t.boolean :product_se
+      t.boolean :product_shw
       t.string :timeframe
       t.references :postcode
       t.timestamps

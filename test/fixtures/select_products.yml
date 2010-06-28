@@ -1,7 +1,9 @@
 one:
-  product: MyString
+  product_se: true
+  product_shw: true
   timeframe: MyString
 
 two:
-  product: MyString
+  product_se: true
+  product_shw: true
   timeframe: MyString

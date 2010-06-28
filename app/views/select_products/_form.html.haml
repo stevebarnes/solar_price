@@ -5,11 +5,11 @@
     %h2
       Are you interested in Solar Hot Water or Solar Power?
     %span.option_label
-      = f.radio_button :product, "Solar Electricity"
+      = f.check_box :product_se
       = f.label "Solar Electricity"
     %br
     %span.option_label
-      = f.radio_button :product, "Solar Hot Water"
+      = f.check_box :product_shw
       = f.label "Solar Hot Water"
     %h2
       Do you want a quote this week ar are you just looking?

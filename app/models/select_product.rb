@@ -1,5 +1,5 @@
 class SelectProduct < ActiveRecord::Base
-  attr_accessible :product, :timeframe
+  attr_accessible :product_se, :product_shw, :timeframe
   belongs_to :postcode
 
   validate :check_fields
