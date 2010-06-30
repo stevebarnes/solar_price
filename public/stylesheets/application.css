@@ -412,3 +412,12 @@ p {
 #admin_menu a {
   color: white;
 }
+
+
+#privacy{
+  color: green;
+  font-size: 1.5em;
+  padding-top: 200px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
