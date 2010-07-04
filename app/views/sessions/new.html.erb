@@ -1,11 +1,17 @@
-<% form_tag sessions_path do %>
-  <p>
-    <%= label_tag :login%><br />
-    <%= text_field_tag :login, params[:login] %>
-  </p>
-  <p>
-    <%= label_tag :password %><br />
-    <%= password_field_tag :password %>
-  </p>
-  <p><%= submit_tag "Log in" %></p>
-<% end %>
+<div id="subsequentpages">
+  <div id="login-frame">
+    <div id="login-warning">Warning: This facility is for authorised staff only. Violations will be investigated and prosecuted.</div>
+    <br/>
+    <% form_tag sessions_path do %>
+      <p>
+        <%= label_tag :login%><br />
+        <%= text_field_tag :login, params[:login] %>
+      </p>
+      <p>
+        <%= label_tag :password %><br />
+        <%= password_field_tag :password %>
+      </p>
+      <p><%= submit_tag "Log in" %></p>
+    <% end %>
+  </div>
+</div>

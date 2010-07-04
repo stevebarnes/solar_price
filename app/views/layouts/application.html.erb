@@ -18,7 +18,9 @@
 
       <%= yield %>
     </div>
-
+    <div id="privacylink">
+      <a href="/privacy_policy.html">privacy policy</a>
+    </div>
     <% if logged_in?  %>
       <div id="admin_menu">
         <%= link_to "Suppliers", suppliers_path %>
