@@ -1,15 +1,19 @@
 - form_for @supplier do |f|
   %div#flash
     = f.error_messages
-  %p
-    Name:
-    &nbsp;&nbsp;
-    = f.text_field :name, :size => "33"
-  %p
-    Contact:
-    = f.text_field :first_name, :size => "15"
-    = f.text_field :last_name, :size => "15"
+
   %div.supp-l
+    %h4
+      SUPPLER DETAILS
+    %p
+      Name:
+      &nbsp;&nbsp;
+      = f.text_field :name, :size => "33"
+    %p
+      Contact:
+      <br/>
+      = f.text_field :first_name, :size => "15"
+      = f.text_field :last_name, :size => "15"
     %p
       = f.label :abn
       %br
@@ -29,18 +33,28 @@
       = f.select :state, [["QLD","QLD"],["N.S.W","N.S.W."],["N.T.","N.T."],["S.A","S.A."],["TAS", "TAS"],["VIC", "VIC"],["W.A.", "W.A."]]
   %div.supp-r
     %div.supp-controls
+      %h4
+        SUPPLER CONTROLS
       %p
         = f.label :active
-        %br
         = f.check_box :active
-      %p
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         = f.label :credit
-        %br
-        = f.text_field :credit, :size => "6"
+        &nbsp;
+        = f.text_field :credit, :size => "4"
+    %div.supp-spacer
+    %div.supp-pcs
+      %h4
+        POSTCODES
+      %p.greentext
+        <b>Existing postcodes:</b> uncheck to remove them...
       %p
         - for area in @supplier.supplier_areas
-          = area.postcode
-          = check_box_tag "supplier[postcodes_change][]", area.id, true
+          %span.pc-check
+            = area.postcode
+            = check_box_tag "supplier[postcodes_change][]", area.id, true
+      %p.greentext
+        <b>New postcodes</b>: please separate these with a comma.  For example, 4001, 4002, 4003
       %p
         = f.text_area :postcodes_requested, :size => '40x2'
 

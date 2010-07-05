@@ -105,6 +105,11 @@ a {
   padding-right: 10px;
   text-align: right;
 }
+#menu_bar_fp a {
+  color: green;
+}
+
+
 
 #new_postcode{
 
@@ -210,11 +215,11 @@ a {
 }
 
 /*************************************************************/
-/*  SUPPLIER MAINTENANCE                                  ***/
+/*  EDIT SUPPLIER PAGE                                       */
 /*************************************************************/
 
 .edit_supplier {
-  height:333px;
+  height:375px;
   padding-left:20px;
   text-align:left;
   width:775px;
@@ -222,19 +227,38 @@ a {
 
 .supp-l{
   width: 325px;
-  height: 285px;
+  height: 385px;
   float: left;
-  padding-left: 55px;
+  padding-left: 25px;
 }
 .supp-r{
-  width: 380px;
-  height: 285px;
+  width: 400px;
+  height: 385px;
   float: right;
 }
 .supp-controls{
   border: 1px gray solid;
-  width: 200px;
+  width: 345px;
   background-color: #fead5b;
+}
+.supp-spacer{
+  border: none;
+  height: 5px;
+  width: 345px;
+  background-color: none;
+}
+.supp-pcs{
+  border: 1px gray solid;
+  width: 345px;
+  background-color: none;
+}
+.pc-check {
+  display: inline-block;
+  width: 55px;
+  background-color: #e4e4e4;
+  padding: 1px;
+  border-right: 2px solid white;
+  border-bottom: 4px solid white;
 }
 
 
@@ -260,6 +284,14 @@ h3{
   font-weight: bold;
   padding-left: 20px;
 }
+h4{
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 10px;
+  margin-top: 7px;
+  margin-bottom: 5px;
+}
 
 p{
   font-size: 13px;
@@ -282,6 +314,13 @@ p{
   line-height: 30px;
   padding-left: 20px;
 }
+
+.greentext {
+  color: green;
+}
+
+
+
 /*************************************************************/
 /*** OTHER                                                 ***/
 /*************************************************************/
@@ -414,8 +453,15 @@ p {
 }
 
 #privacylink{
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
   color: grey;
   text-align: right;
+}
+
+#privacylink a {
+  color: silver;
 }
 
 #privacy{
@@ -517,6 +563,9 @@ p {
   border-bottom-color: #b5b5b5;
 }
 
+#supplier-tbl td {
+  padding-left: 5px;
+}
 
 
 
