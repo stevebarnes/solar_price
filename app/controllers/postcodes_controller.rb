@@ -1,6 +1,6 @@
 class PostcodesController < ApplicationController
   def index
-    @postcodes = Postcode.all
+    @postcodes = Postcode.all(:joins => :site_details, :joins => :select_product)
   end
   
   def show

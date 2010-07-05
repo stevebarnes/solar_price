@@ -11,11 +11,11 @@ ActionController::Routing::Routes.draw do |map|
   end
 
   map.resources :postcodes do |postcode|
-    postcode.resources :sizings, :only => [:new, :create]
-    postcode.resources :site_surveys, :only => [:new, :create]
-    postcode.resources :site_details, :only => [:new, :create]
-    postcode.resources :select_products, :only => [:new, :create]
-    postcode.resources :free_reports, :only => [:new, :create]
+    postcode.resources :sizings, :only => [:new, :create, :view]
+    postcode.resources :site_surveys, :only => [:new, :create, :view]
+    postcode.resources :site_details, :only => [:new, :create, :view, :index]
+    postcode.resources :select_products, :only => [:new, :create, :view]
+    postcode.resources :free_reports, :only => [:new, :create, :view]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

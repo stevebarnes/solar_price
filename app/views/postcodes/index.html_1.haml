@@ -1,0 +1,22 @@
+%table
+  %tr
+    %th Postcode
+    %th Quote type
+    %th First name
+    %th Last name
+    %th Email
+    %th Street address
+    %th Suburb
+    %th State
+  - for postcode in @postcodes
+    @sd = postcode.site_details
+    %tr
+      %td= h postcode.postcode
+      %td= h @sd.quote_type
+      %td= h @sd.first_name
+      %td= h @sd.last_name
+      %td= h @sd.email
+      %td= h @sd.street_address
+      %td= h @sd.suburb
+      %td= h @sd.state
+      %td= link_to 'Details', postcode

@@ -12,7 +12,7 @@ class Postcode < ActiveRecord::Base
   validate :check_postcode
 
   def postcodes
-
+    Postcode.all
   end
 
   def check_postcode

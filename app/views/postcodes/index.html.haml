@@ -1,11 +1,25 @@
-%table
-  %tr
-    %th Postcode
-  - for postcode in @postcodes
-    %tr
-      %td= h postcode.postcode
-      %td= link_to 'Show', postcode
-      %td= link_to 'Edit', edit_postcode_path(postcode)
-      %td= link_to 'Destroy', postcode, :confirm => 'Are you sure?', :method => :delete
+%div#subsequentpages
+  %div#container
+    %h2
+      Leads
+    %table#lead-table
+      %tr
+        %th Date/Time
+        %th Postcode
+        %th Elec
+        %th H.W.
+        %th Timeframe
+        %th First name
+        %th Last name
 
-%p= link_to "New Postcode", new_postcode_path
+      - for postcode in @postcodes
+        %tr
+          %td= h postcode.created_at
+          %td= h postcode.postcode
+          %td= h postcode.select_product.product_se
+          %td= h postcode.select_product.product_shw
+          %td= h postcode.select_product.timeframe
+          %td
+            = h postcode.site_details.first_name
+            = h postcode.site_details.last_name
+          %td= link_to 'Details', postcode
