@@ -2,15 +2,16 @@
   %div#container
     %h2
       Suppliers
+      %br
+      %br
       %table
         %tr
-          %th Supplier
-          %th Contact
-          %th Phone
-          %th Suburb
-          %th State
-          %th Country
-          %th Active
+          %th.h-supplier Supplier
+          %th.h-contact Contact
+          %th.h-phone Phone
+          %th.h-suburb Suburb
+          %th.h-state State
+          %th.h-active Active
         - for supplier in @suppliers
           %tr
             %td

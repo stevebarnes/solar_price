@@ -445,6 +445,39 @@ p {
   font-weight: bold;
 }
 
+/*******************************************/
+/* Supplier Listing                        */
+/*******************************************/
+.h-supplier{
+  width: 100px;
+  text-align: left;
+}
+.h-contact{
+  width: 100px;
+  text-align: left;
+}
+.h-phone{
+  width: 70px;
+  text-align: left;
+}
+.h-suburb{
+    width: 70px;
+  text-align: left;
+}
+.h-state{
+    width: 50px;
+  text-align: left;
+}
+.h-active{
+    width: 30px;
+  text-align: left;
+}
+
+
+
+
+
+
 
 /*
  popup.js
