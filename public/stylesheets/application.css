@@ -571,6 +571,10 @@ p {
 /*******************************************/
 /* Leads Listing  (/postcodes)             */
 /*******************************************/
+#lead-tbl-outer{
+  padding-left: 20px;
+}
+
 #leads_head {
   width: 600px;
   height: 26px;
@@ -579,7 +583,7 @@ p {
 }
 
 #h-lead-dt{
-  width: 150px;
+  width: 100px;
   text-align: left;
   background-color: #4B7399;
   color: white !important;

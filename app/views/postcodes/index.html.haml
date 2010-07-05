@@ -2,24 +2,26 @@
   %div#container
     %h2
       Leads
-    %table#lead-tbl
-      %tr
-        %th#h-lead-dt Date/Time
-        %th#h-lead-pc Postcode
-        %th#h-lead-elec Elec
-        %th#h-lead-hw H.W.
-        %th#h-lead-tf Timeframe
-        %th#h-lead-name First name
-
-
-      - for postcode in @postcodes
+    %div#lead-tbl-outer
+      %table#lead-tbl
         %tr
-          %td= h postcode.created_at.strftime("%m/%d/%Y")
-          %td= h postcode.postcode
-          %td= h postcode.select_product.product_se
-          %td= h postcode.select_product.product_shw
-          %td= h postcode.select_product.timeframe
-          %td
-            = h postcode.site_details.first_name
-            = h postcode.site_details.last_name
-          %td= link_to 'Details', postcode
+          %th#h-lead-dt Date/Time
+          %th#h-lead-pc Postcode
+          %th#h-lead-elec Elec
+          %th#h-lead-hw H.W.
+          %th#h-lead-tf Timeframe
+          %th#h-lead-name Name
+
+
+        - for postcode in @postcodes
+          %tr
+            %td
+              = h postcode.created_at.strftime("%m/%d/%Y")
+            %td= h postcode.postcode
+            %td= h postcode.select_product.product_se
+            %td= h postcode.select_product.product_shw
+            %td= h postcode.select_product.timeframe
+            %td
+              = h postcode.site_details.first_name
+              = h postcode.site_details.last_name
+            %td= link_to 'Details', postcode
