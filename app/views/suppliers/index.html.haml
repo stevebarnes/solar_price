@@ -4,20 +4,21 @@
       Suppliers
       %br
       %br
-      %table
-        %tr
-          %th.h-supplier Supplier
-          %th.h-contact Contact
-          %th.h-phone Phone
-          %th.h-suburb Suburb
-          %th.h-state State
-          %th.h-active Active
+      %table#supplier-tbl
+        %tr#supplier_head
+          %th#h-supplier Supplier
+          %th#h-contact Contact
+          %th#h-phone Phone
+          %th#h-suburb Suburb
+          %th#h-state State
+          %th#h-active Active
         - for supplier in @suppliers
-          %tr
+          %tr.supplier_data_row
             %td
-              = h supplier.name
+              = h supplier.name   
+            %td
               = h supplier.first_name
-            %td= h supplier.last_name
+              = h supplier.last_name
             %td= h supplier.phone
             %td= h supplier.suburb
             %td= h supplier.state
