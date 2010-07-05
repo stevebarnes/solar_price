@@ -568,13 +568,88 @@ p {
 }
 
 
+/*******************************************/
+/* Leads Listing  (/postcodes)             */
+/*******************************************/
+#leads_head {
+  width: 600px;
+  height: 26px;
+  padding-top: 7px;
+  background-color: #4B7399;
+}
 
+#h-lead-dt{
+  width: 150px;
+  text-align: left;
+  background-color: #4B7399;
+  color: white !important;
+  font-weight: bold !important;
+  padding-left: 5px;
+  padding-right: 5px;
+}
 
+#h-lead-pc{
+  width: 65px;
+  text-align: left;
+  background-color: #4B7399;
+  color: white !important;
+  font-weight: bold !important;
+  padding-left: 5px;
+  padding-right: 5px;
+}
 
+#h-lead-elec{
+  width: 50px;
+  text-align: left;
+  background-color: #4B7399;
+  color: white !important;
+  font-weight: bold !important;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#h-lead-hw{
+  width: 50px;
+  text-align: left;
+  background-color: #4B7399;
+  color: white !important;
+  font-weight: bold !important;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#h-lead-tf{
+  width: 150px;
+  text-align: left;
+  background-color: #4B7399;
+  color: white !important;
+  font-weight: bold !important;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#h-lead-name{
+  width: 150px;
+  text-align: left;
+  background-color: #4B7399;
+  color: white !important;
+  font-weight: bold !important;
+  padding-left: 5px;
+  padding-right: 5px;
+}
 
-/*
- popup.js
-*/
+.lead_data_row {
+
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #b5b5b5;
+}
+
+#lead-tbl td {
+  padding-left: 5px;
+}
+
+/*************************************************************/
+/*           popup.js                                        */
+/*************************************************************/
+
 div.popup {
   max-width: 600px;
   border: 1px solid red;

@@ -2,15 +2,15 @@
   %div#container
     %h2
       Leads
-    %table#lead-table
+    %table#lead-tbl
       %tr
-        %th Date/Time
-        %th Postcode
-        %th Elec
-        %th H.W.
-        %th Timeframe
-        %th First name
-        %th Last name
+        %th#h-lead-dt Date/Time
+        %th#h-lead-pc Postcode
+        %th#h-lead-elec Elec
+        %th#h-lead-hw H.W.
+        %th#h-lead-tf Timeframe
+        %th#h-lead-name First name
+
 
       - for postcode in @postcodes
         %tr
