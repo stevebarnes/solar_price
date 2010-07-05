@@ -14,7 +14,7 @@
 
       - for postcode in @postcodes
         %tr
-          %td= h postcode.created_at
+          %td= h postcode.created_at.strftime("%m/%d/%Y")
           %td= h postcode.postcode
           %td= h postcode.select_product.product_se
           %td= h postcode.select_product.product_shw
