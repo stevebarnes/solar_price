@@ -5,6 +5,9 @@ class PostcodesController < ApplicationController
   
   def show
     @postcode = Postcode.find(params[:id])
+#    @sd = SiteDetails.find_by_postcode(params[:postcode_id => @postcode.id])
+#    @ss = SiteSurvey.find_by_postcode(params[:postcode_id => @postcode.id])
+#    :site_details, :joins => :select_product, :joins => :site_survey, :joins => :sizing)
   end
   
   def new
