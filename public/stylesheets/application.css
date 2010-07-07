@@ -452,6 +452,18 @@ p {
   color: white;
 }
 
+/*******************************************/
+/* Privacy Page                            */
+/*******************************************/
+
+#privacy{
+  color: green;
+  font-size: 1.5em;
+  padding-top: 200px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
 #privacylink{
   width: 800px;
   margin-left: auto;
@@ -464,12 +476,41 @@ p {
   color: silver;
 }
 
-#privacy{
+/*******************************************/
+/* About Us page                           */
+/*******************************************/
+
+#aboutus{
   color: green;
-  font-size: 1.5em;
-  padding-top: 200px;
+  font-size: 1.0em;
+  padding-top: 70px;
   padding-left: 50px;
   padding-right: 50px;
+}
+
+.aboutus_title{
+  color: green;
+  font-size: 1.6em;
+  font-weight: bold;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 10px;
+}
+
+.aboutus_heading{
+  color: green;
+  font-size: 1.4em;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 10px;
+}
+.aboutus_text{
+  color:#161616;
+  font-family:Verdana,Helvetica,Arial;
+  font-size: 1.0em;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 10px;
 }
 
 
