@@ -42,8 +42,10 @@
           %p
             = f.label "Postcodes you would like to cover."
             = f.label "NOTE: please separate these with a comma."
-            = f.label "for example, 4001, 4002, 4003"
+
             %br
             = f.text_area :postcodes_requested, :size => '80x2'
+            %br
+            = f.label "for example, 4001, 4002, 4003"
       %div.nextdiv
         = image_submit_tag("/images/btn_next.png")
