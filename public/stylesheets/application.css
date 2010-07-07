@@ -458,7 +458,7 @@ p {
 
 #privacy{
   color: green;
-  font-size: 1.5em;
+  font-size: 1.01em;
   padding-top: 200px;
   padding-left: 50px;
   padding-right: 50px;
@@ -475,6 +475,14 @@ p {
 #privacylink a {
   color: silver;
 }
+.privacy_text{
+  color:#161616;
+  font-family:Verdana,Helvetica,Arial;
+  font-size: 1.0em;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  padding-top: 5px;
+}
 
 /*******************************************/
 /* About Us page                           */
@@ -482,8 +490,8 @@ p {
 
 #aboutus{
   color: green;
-  font-size: 1.0em;
-  padding-top: 70px;
+  font-size: 1.01em;
+  padding-top: 73px;
   padding-left: 50px;
   padding-right: 50px;
 }
@@ -494,7 +502,7 @@ p {
   font-weight: bold;
   padding-left: 0px;
   padding-top: 0px;
-  padding-bottom: 10px;
+  padding-bottom: 3px;
 }
 
 .aboutus_heading{
@@ -502,17 +510,19 @@ p {
   font-size: 1.4em;
   padding-left: 0px;
   padding-top: 0px;
-  padding-bottom: 10px;
+  padding-bottom: 3px;
 }
 .aboutus_text{
   color:#161616;
   font-family:Verdana,Helvetica,Arial;
   font-size: 1.0em;
   padding-left: 0px;
-  padding-top: 0px;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
+  padding-top: 5px;
 }
-
+#about_pics{
+  padding-left: 25px;
+}
 
 /*******************************************/
 /* Login Frame                             */
